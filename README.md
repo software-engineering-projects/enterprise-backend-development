@@ -114,7 +114,7 @@
 
 - Standard production environment tool
 - Ensures consistent runtime across systems
-- 
+  
 <br>
 
 ### Supporting Engineering Tools
@@ -124,21 +124,21 @@
 - Git
 - GitHub
 
----
+<br>
 
 #### Environment Management
 
 - Node Version Manager (nvm)
 - Environment variables (`.env`)
 
----
+<br>
 
 #### Logging & Observability (Basic Stage)
 
 - Structured console logs
 - Request tracing mindset
 
----
+<br>
 
 #### Cloud Deployment (Later Stage)
 
@@ -146,10 +146,10 @@
 - Railway
 - AWS (intro level only)
 
+<br>
+
+### Mental Model (Important Abstraction Layer)
 ---
-
-### 4. Mental Model (Important Abstraction Layer)
-
 Think in layers:
 
 #### Language Layer
@@ -167,10 +167,10 @@ Think in layers:
 #### Execution Layer
 - Logs + debugging explain behavior
 
+<br>
+
+### What to Avoid Early (Prevent Cognitive Overload)
 ---
-
-### 5. What to Avoid Early (Prevent Cognitive Overload)
-
 Avoid early focus on:
 
 - Excel / CSV manual workflows
@@ -182,10 +182,10 @@ Avoid early focus on:
 - These introduce external interpretation loops
 - They shift focus away from deterministic backend systems
 
+<br>
+
+### Final Structured Path
 ---
-
-### 6. Final Structured Path
-
 #### Recommended stack sequence
 
 1. JavaScript → TypeScript
@@ -195,18 +195,18 @@ Avoid early focus on:
 5. Git + GitHub
 6. Docker
 
----
+<br>
 
 #### Optional extensions later
-
+---
 - Python (support role)
 - Java + Spring Boot (enterprise path)
 - Cloud platforms (AWS-level work)
 
+<br>
+
+### Core Principle
 ---
-
-### 7. Core Principle
-
 The goal is not tool accumulation.
 
 The goal is:
