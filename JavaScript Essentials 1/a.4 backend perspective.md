@@ -1,11 +1,11 @@
 
-# 🎯 Core Takeaway: The Backend Perspective
+## 🎯 Core Takeaway: The Backend Perspective
 
 JavaScript is powerful and widely used, but it is not universally optimal. Its limitations matter most when you understand **where it runs** (browser vs. server) and **how exposed your code is.**
 <br>
 <br>
 
-## 🧠 What This Means for Backend Development
+### 🧠 What This Means for Backend Development
 
 #### 1. Browser vs. Server: Security Models
 The environment dictates the level of trust and access.
