@@ -1,63 +1,44 @@
 ```mermaid
-flowchart TB
+flowchart LR
 
-%% Core Idea
-A[JavaScript Runs on Both Client and Server]
+%% Client Side
+subgraph CLIENT[Client-Side]
+C1[UI Layer HTML CSS JS]
+C2[User Interaction Clicks Inputs]
+C3[Browser State]
+C4[Send HTTP Request]
+end
 
-%% Split roles
-A --> B[Client-Side Browser]
-A --> C[Server-Side Backend]
+%% Interaction
+subgraph FLOW[Client ↔ Server Interaction]
+F1[Request HTTP]
+F2[Response HTTP]
+end
 
-%% Client side
-B --> B1[Handles UI and User Interaction]
-B --> B2[Runs on User Device]
-B --> B3[Sends Requests to Server]
+%% Server Side
+subgraph SERVER[Server-Side]
+S1[API Endpoints]
+S2[Business Logic]
+S3[Authentication Security]
+S4[Database Layer]
+DB[(Database)]
+end
 
-%% Server side
-C --> C1[Handles Data and Business Logic]
-C --> C2[Runs on Node.js or Server Environment]
-C --> C3[Receives Client Requests]
+%% Client flow
+C2 --> C4
+C4 --> F1
 
-%% Backend as brain
-C1 --> D[Backend Brain of the System]
-D --> D1[Processes Requests]
-D --> D2[Interacts with Database]
-D --> D3[Applies Business Rules]
-D --> D4[Returns Results]
+%% Request to server
+F1 --> S1
+S1 --> S2
+S2 --> S3
+S2 --> S4
+S4 --> DB
+DB --> S4
+S4 --> S2
 
-%% Flow of application
-B3 --> E[Request login or fetch data]
-E --> C3
-C3 --> D1
-D3 --> F[Response Generated]
-F --> G[Structured Data JSON]
-G --> B
-
-%% Output distinction
-G --> H[Frontend Renders UI]
-G --> I[Backend Does Not Return UI]
-
-%% Separation of concerns
-C --> J[Backend Code is Hidden and Secure]
-J --> J1[Authentication]
-J --> J2[Security Rules]
-J --> J3[Protected Operations]
-
-%% Shared language
-A --> K[One Language JavaScript]
-K --> K1[Easier Full Stack Transition]
-K --> K2[API Focused Development]
-
-%% Mental model
-L[Mental Model]
-L --> L1[Client Ask]
-L --> L2[Backend Decide Process Respond]
-
-%% Common mistakes
-M[Common Mistakes]
-M --> M1[Mixing Frontend and Backend Logic]
-M --> M2[Focusing Too Much on UI]
-M --> M3[Ignoring Server Side Thinking]
-M --> M4[Focus on Requests Data Responses]
-
+%% Response back
+S2 --> F2
+F2 --> C3
+C3 --> C1
 ```
