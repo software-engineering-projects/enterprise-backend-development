@@ -67,7 +67,6 @@ GW --> TRACE
 GW --> CLIENT
 ```
 <b>
----
   
 ## Monolith
 ```mermaid
