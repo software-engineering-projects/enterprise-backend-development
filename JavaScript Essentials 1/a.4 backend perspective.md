@@ -1,6 +1,3 @@
-This is the GitHub-optimized Markdown for your "Backend Perspective" notes. It uses clear headers, callouts, and comparison tables to make the information easy to digest.
-
-***
 
 # 🎯 Core Takeaway: The Backend Perspective
 
