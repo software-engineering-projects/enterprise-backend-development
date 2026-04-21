@@ -14,6 +14,7 @@ graph TD
 <br>
 
 #### 1. Backend (The Monolith)
+---
 **Tech:** Node.js + Express  
 This is your actual "Monolith" system. It handles everything in one place:
 *   **Routing:** Directing requests to the right place.
@@ -23,12 +24,14 @@ This is your actual "Monolith" system. It handles everything in one place:
 <br>
 
 #### 2. Database
+---
 **Tech:** PostgreSQL  
 The persistent storage layer. It stores all your application data (Users, Orders, Products, etc.) in relational tables.
 <br>
 <br>
 
 #### 3. pgAdmin 4
+---
 **Tech:** GUI Management Tool  
 *Note: This is **not** part of your app's runtime.*
 *   View tables and schemas visually.
@@ -37,10 +40,10 @@ The persistent storage layer. It stores all your application data (Users, Orders
 <br>
 
 #### 4. Optional Frontend
+---
 **Tech:** React, Vue, or plain HTML/CSS  
 The user interface that talks to your backend via HTTP/REST.
 
----
 <br>
 
 ### 🧪 What Makes it a “Monolith”?
