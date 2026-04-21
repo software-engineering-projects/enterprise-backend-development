@@ -62,13 +62,13 @@ DAL -.-> ERR
 ```
 ---
 
-# Core Components of a Backend System
+## Core Components of a Backend System
 
 A backend system is a pipeline that receives requests, processes data, and returns responses.
 
 ---
 
-## 1. API Layer (Entry Point)
+### 1. API Layer (Entry Point)
 *   **Role:** Front door of the backend system.
 *   **Common tools:** Routes, endpoints, request handlers (e.g., Express.js).
 *   **Responsibilities:**
@@ -76,7 +76,7 @@ A backend system is a pipeline that receives requests, processes data, and retur
     *   Extract input (params, body, headers).
     *   Send responses back.
 
-## 2. Business Logic Layer
+### 2. Business Logic Layer
 *   **Role:** Decides what should happen; the core decision-making part.
 *   **Responsibilities:**
     *   Apply rules.
@@ -87,7 +87,7 @@ A backend system is a pipeline that receives requests, processes data, and retur
     *   Calculate prices/discounts.
     *   Check user permissions.
 
-## 3. Data Access Layer
+### 3. Data Access Layer
 *   **Role:** Manages persistent data operations; interface between logic and storage.
 *   **Responsibilities:**
     *   Fetch data.
@@ -97,7 +97,7 @@ A backend system is a pipeline that receives requests, processes data, and retur
     *   Databases (SQL / NoSQL).
     *   Queries.
 
-## 4. Database
+### 4. Database
 *   **Role:** The "memory" of the system.
 *   **Types:**
     *   **Relational:** Structured tables (e.g., PostgreSQL, MySQL).
@@ -106,19 +106,19 @@ A backend system is a pipeline that receives requests, processes data, and retur
     *   Store application data permanently.
     *   Maintain data consistency.
 
-## 5. Authentication and Authorization Layer
+### 5. Authentication and Authorization Layer
 *   **Role:** Security gatekeeper.
 *   **Authentication:** Identifies the user (Who are you?).
 *   **Authorization:** Determines permissions (What are you allowed to do?).
 
-## 6. Error Handling System
+### 6. Error Handling System
 *   **Role:** Stability and safety layer.
 *   **Responsibilities:**
     *   Catch runtime errors to prevent crashes.
     *   Return safe, informative error responses.
     *   Log issues for debugging.
 
-## 7. Middleware (Optional but Important)
+### 7. Middleware (Optional but Important)
 *   **Role:** Processing filter layer.
 *   **Responsibilities:**
     *   Runs logic between the request and the response.
@@ -126,7 +126,7 @@ A backend system is a pipeline that receives requests, processes data, and retur
     *   Input validation.
     *   Authentication checks.
 
-## 8. External Services (Optional)
+### 8. External Services (Optional)
 *   **Role:** External integrations.
 *   **Examples:**
     *   Payment gateways (Stripe).
@@ -135,7 +135,7 @@ A backend system is a pipeline that receives requests, processes data, and retur
 
 ---
 
-## How Everything Works Together
+### How Everything Works Together
 1.  **Request** enters the **API layer**.
 2.  **Middleware** processes the request (logs it, checks auth).
 3.  **Business logic** executes the specific rules for that request.
@@ -145,7 +145,7 @@ A backend system is a pipeline that receives requests, processes data, and retur
 
 ---
 
-## Mental Model: The Factory Pipeline
+### Mental Model: The Factory Pipeline
 *   **API** = Entry point / Reception
 *   **Middleware** = Security checkpoints
 *   **Business Logic** = Assembly line
