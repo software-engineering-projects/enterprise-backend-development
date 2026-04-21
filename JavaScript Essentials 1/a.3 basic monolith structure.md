@@ -46,7 +46,7 @@ The user interface that talks to your backend via HTTP/REST.
 <br>
 
 ### 🧪 What Makes it a “Monolith”?
----
+
 Your Node.js app is considered a monolith because **one single codebase** contains all your domains:
 
 *   `GET /users` — (User Management)
@@ -58,7 +58,7 @@ Your Node.js app is considered a monolith because **one single codebase** contai
 <br>
 
 ### 🛠️ Example Project Structure
----
+
 ```text
 project/
 │
@@ -74,7 +74,7 @@ project/
 <br>
 
 ### 🔁 Local Request Flow
----
+
 1.  **Frontend** sends a `POST /orders` request.
 2.  **Express Router** receives the request in `server.js`.
 3.  **Controller** validates the user's session and checks stock.
@@ -86,7 +86,7 @@ project/
 <br>
 
 ### 🧠 Why This Setup is Powerful
----
+
 Building this locally allows you to simulate real enterprise behavior:
 
 | Feature | Realistic Simulation |
@@ -98,7 +98,7 @@ Building this locally allows you to simulate real enterprise behavior:
 <br>
 
 ### ⚠️ Key Clarification
----
+
 | Tool | Role |
 | :--- | :--- |
 | **Node.js / Express** | **Backend** (The Monolith System) |
@@ -108,6 +108,5 @@ Building this locally allows you to simulate real enterprise behavior:
 
 <br>
 
-## 🚀 Bottom Line
----
+### 🚀 Bottom Line
 **Yes**—you can build a fully realistic monolith system locally that behaves exactly like production. It consists of one backend app, one database, real API flows, and professional debugging tools.
