@@ -8,7 +8,7 @@
 
 <br>
 
-### 1. Core Programming Language (Foundation)
+### Core Programming Language (Foundation)
 ---
 #### Primary (Choose ONE as main)
 
