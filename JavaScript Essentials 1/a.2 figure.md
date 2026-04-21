@@ -2,18 +2,18 @@
 flowchart LR
 
 %% CLIENT
-CLIENT[Client-Side<br/>Web / Mobile Apps]
+CLIENT[Client Side Web / Mobile Apps]
 
-%% EDGE / DELIVERY LAYER
-CDN[CDN / Static Assets]
+%% EDGE LAYER
+CDN[CDN Static Assets]
 LB[Load Balancer]
 
 %% API LAYER
-GW[API Gateway<br/>Routing + Rate Limiting + Auth]
+GW[API Gateway Routing Rate Limiting Auth]
 
 %% BACKEND SERVICES
-subgraph BACKEND[Backend Services (Microservices)]
-AUTH[Auth Service<br/>Login / Tokens]
+subgraph BACKEND[Backend Services Microservices]
+AUTH[Auth Service Login Tokens]
 USER[User Service]
 ORDER[Order Service]
 PAYMENT[Payment Service]
@@ -27,13 +27,13 @@ CACHE[(Cache Redis)]
 SEARCH[(Search Engine)]
 end
 
-%% ASYNC / EVENTS
-MQ[Message Queue / Event Bus]
+%% ASYNC SYSTEM
+MQ[Message Queue Event Bus]
 
 %% OBSERVABILITY
-LOGS[Logging]
-MONITOR[Monitoring / Metrics]
-TRACE[Tracing]
+LOGS[Logging System]
+MONITOR[Monitoring Metrics]
+TRACE[Tracing System]
 
 %% FLOW
 CLIENT --> CDN --> LB --> GW
@@ -54,9 +54,14 @@ MQ --> NOTIF
 
 USER --> SEARCH
 
-BACKEND --> LOGS
-BACKEND --> MONITOR
-BACKEND --> TRACE
+%% Observability connections (corrected)
+GW --> LOGS
+AUTH --> LOGS
+ORDER --> LOGS
+PAYMENT --> LOGS
+
+GW --> MONITOR
+GW --> TRACE
 
 GW --> CLIENT
 ```
