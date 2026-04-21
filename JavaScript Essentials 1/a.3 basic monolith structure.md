@@ -26,7 +26,7 @@ This is your actual "Monolith" system. It handles everything in one place:
 ### 2. Database
 ---
 **Tech:** PostgreSQL  
-The persistent storage layer. It stores all your application data (Users, Orders, Products, etc.) in relational tables.
+- The persistent storage layer. It stores all your application data (Users, Orders, Products, etc.) in relational tables.
 <br>
 <br>
 
