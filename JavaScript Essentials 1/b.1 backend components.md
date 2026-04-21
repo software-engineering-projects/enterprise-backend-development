@@ -1,111 +1,160 @@
+```mermaid
+flowchart TB
+
+%% =====================
+%% CLIENT LAYER
+%% =====================
+subgraph CLIENT[Client Layer]
+C[Client Request Browser / Mobile App]
+end
+
+%% =====================
+%% APPLICATION LAYERS
+%% =====================
+subgraph APP[Backend Application Layer]
+
+API[API Layer Entry Point]
+
+subgraph MW[Middleware Layer]
+M1[Logging]
+M2[Validation]
+M3[Auth Pre-checks]
+end
+
+AUTH[Authentication & Authorization]
+
+subgraph CORE[Core Logic Layer]
+BL[Business Logic Decision Making Rules]
+end
+
+subgraph DATA[Data Layer]
+DAL[Data Access Layer ORM Queries]
+DB[(Database)]
+end
+
+EXT[External Services APIs Payments Email]
+
+ERR[Error Handling System]
+end
+
+%% =====================
+%% RESPONSE LAYER
+%% =====================
+RES[Response to Client]
+
+%% =====================
+%% FLOW
+%% =====================
+
+C --> API --> MW --> AUTH --> BL --> DAL --> DB
+DB --> DAL --> BL
+
+BL --> EXT --> BL
+
+BL --> RES --> C
+
+%% Error paths (conceptual)
+API -.-> ERR
+MW -.-> ERR
+AUTH -.-> ERR
+BL -.-> ERR
+DAL -.-> ERR
 ```
-Core Components of a Backend System
-  • A backend system is a pipeline that receives requests, processes data, and returns responses
+---
 
-API Layer (Entry Point)
-  • Entry point for all requests
-  • Common tools: routes, endpoints, request handlers (e.g. Express.js)
-  • Responsibilities:
-    • Receive HTTP requests (GET, POST, etc.)
-    • Extract input (params, body, headers)
-    • Send responses back
-  • Role:
-    • Front door of the backend system
+# Core Components of a Backend System
 
-Business Logic Layer
-  • Core decision-making part of the backend
-  • Responsibilities:
-    • Apply rules
-    • Perform calculations
-    • Decide outcomes
-  • Examples:
-    • Validate login
-    • Calculate price
-    • Check permissions
-  • Role:
-    • Decides what should happen
+A backend system is a pipeline that receives requests, processes data, and returns responses.
 
-Data Access Layer
-  • Interface between backend logic and storage
-  • Responsibilities:
-    • Fetch data
-    • Store data
-    • Update records
-  • Works with:
-    • Databases (SQL / NoSQL)
-    • Queries
-  • Role:
-    • Manages persistent data operations
+---
 
-Database
-  • Permanent storage system
-  • Types:
-    • Relational (tables)
-    • Document-based (JSON-like structure)
-  • Responsibilities:
-    • Store application data
-    • Maintain consistency
-  • Role:
-    • Memory of the system
+## 1. API Layer (Entry Point)
+*   **Role:** Front door of the backend system.
+*   **Common tools:** Routes, endpoints, request handlers (e.g., Express.js).
+*   **Responsibilities:**
+    *   Receive HTTP requests (GET, POST, etc.).
+    *   Extract input (params, body, headers).
+    *   Send responses back.
 
-Authentication and Authorization Layer
-  • Controls access to the system
-  • Authentication:
-    • Identifies the user
-  • Authorization:
-    • Determines permissions
-  • Role:
-    • Security gatekeeper
+## 2. Business Logic Layer
+*   **Role:** Decides what should happen; the core decision-making part.
+*   **Responsibilities:**
+    *   Apply rules.
+    *   Perform calculations.
+    *   Decide outcomes.
+*   **Examples:**
+    *   Validate login credentials.
+    *   Calculate prices/discounts.
+    *   Check user permissions.
 
-Error Handling System
-  • Prevents system crashes
-  • Responsibilities:
-    • Catch runtime errors
-    • Return safe error responses
-    • Log issues
-  • Role:
-    • Stability and safety layer
+## 3. Data Access Layer
+*   **Role:** Manages persistent data operations; interface between logic and storage.
+*   **Responsibilities:**
+    *   Fetch data.
+    *   Store data.
+    *   Update records.
+*   **Works with:**
+    *   Databases (SQL / NoSQL).
+    *   Queries.
 
-Middleware (Optional but Important)
-  • Runs between request and response
-  • Responsibilities:
-    • Logging
-    • Input validation
-    • Authentication checks
-  • Role:
-    • Processing filter layer
+## 4. Database
+*   **Role:** The "memory" of the system.
+*   **Types:**
+    *   **Relational:** Structured tables (e.g., PostgreSQL, MySQL).
+    *   **Document-based:** JSON-like structures (e.g., MongoDB).
+*   **Responsibilities:**
+    *   Store application data permanently.
+    *   Maintain data consistency.
 
-External Services (Optional)
-  • Integration with third-party systems
-  • Examples:
-    • Payment gateways
-    • Email services
-    • External APIs
-  • Role:
-    • External integrations
+## 5. Authentication and Authorization Layer
+*   **Role:** Security gatekeeper.
+*   **Authentication:** Identifies the user (Who are you?).
+*   **Authorization:** Determines permissions (What are you allowed to do?).
 
-• How Everything Works Together
-  • Request enters API layer
-  • Middleware processes request
-  • Business logic executes rules
-  • Data layer interacts with database
-  • Database stores or retrieves data
-  • Response is returned
-  • Errors are handled if needed
+## 6. Error Handling System
+*   **Role:** Stability and safety layer.
+*   **Responsibilities:**
+    *   Catch runtime errors to prevent crashes.
+    *   Return safe, informative error responses.
+    *   Log issues for debugging.
 
-Mental Model
-  • Backend system = factory pipeline
-    • API = entry point
-    • Middleware = checkpoints
-    • Business logic = assembly line
-    • Data layer = data handling system
-    • Database = storage warehouse
-    • Auth = security control
-    • Error handling = safety system
+## 7. Middleware (Optional but Important)
+*   **Role:** Processing filter layer.
+*   **Responsibilities:**
+    *   Runs logic between the request and the response.
+    *   Logging and monitoring.
+    *   Input validation.
+    *   Authentication checks.
 
-Key Insight
-  • Backend development is building a structured processing pipeline, not writing isolated code files
+## 8. External Services (Optional)
+*   **Role:** External integrations.
+*   **Examples:**
+    *   Payment gateways (Stripe).
+    *   Email services (SendGrid).
+    *   Third-party APIs.
 
-One-Line Summary
-  • A backend system is a layered pipeline that receives requests, applies logic, manages data, enforces security, and returns responses
-```
+---
+
+## How Everything Works Together
+1.  **Request** enters the **API layer**.
+2.  **Middleware** processes the request (logs it, checks auth).
+3.  **Business logic** executes the specific rules for that request.
+4.  **Data layer** interacts with the **Database** to fetch or save info.
+5.  **Response** is formatted and returned to the user.
+6.  **Errors** are handled at any stage if something goes wrong.
+
+---
+
+## Mental Model: The Factory Pipeline
+*   **API** = Entry point / Reception
+*   **Middleware** = Security checkpoints
+*   **Business Logic** = Assembly line
+*   **Data Layer** = Retrieval system
+*   **Database** = Storage warehouse
+*   **Auth** = ID badge check
+*   **Error Handling** = Safety emergency shut-off
+
+> **Key Insight:** Backend development is building a structured processing pipeline, not just writing isolated code files.
+
+**One-Line Summary:**  
+A backend system is a layered pipeline that receives requests, applies logic, manages data, enforces security, and returns responses.
