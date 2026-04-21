@@ -4,7 +4,7 @@ Learning Approach (Backend-Oriented)
   • Extract backend-relevant ideas instead of just finishing modules
   • Focus on data handling, logic, and structure
 
-• 3-Phase Learning Cycle
+3-Phase Learning Cycle
   • Phase A: Understand
     • What is the concept
     • How it behaves
