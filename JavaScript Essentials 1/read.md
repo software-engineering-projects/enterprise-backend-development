@@ -1,3 +1,4 @@
+```
 Learning Approach (Backend-Oriented)
   • Treat the course as a concept source, not the end goal
   • Extract backend-relevant ideas instead of just finishing modules
@@ -66,3 +67,4 @@ Learning Approach (Backend-Oriented)
 • Mindset Shift
   • From: learning JavaScript
   • To: understanding how backend systems process data using JavaScript
+```
