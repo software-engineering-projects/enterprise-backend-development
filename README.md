@@ -24,7 +24,7 @@
 
 👉 This is the recommended starting point.
 
----
+<br>
 
 #### Enterprise-heavy alternative (optional later)
 
@@ -39,7 +39,7 @@
 
 ⚠️ Not a starting point, but a possible upgrade later.
 
----
+<br>
 
 #### Supporting language (optional)
 
@@ -59,7 +59,7 @@
 <br>
 
 ### Core Backend Tools (Engineering Layer)
-
+---
 #### API Frameworks
 
 - Express (Node.js)
@@ -68,7 +68,7 @@
 **Role:**
 - Defines backend structure and request handling
 
----
+<br>
 
 #### Database Layer (Critical)
 
@@ -82,7 +82,7 @@
 
 👉 Core backend thinking skill.
 
----
+<br>
 
 #### Authentication & Security
 
@@ -90,7 +90,7 @@
 - Session-based authentication basics
 - bcrypt password hashing
 
----
+<br>
 
 #### API Communication
 
@@ -98,7 +98,7 @@
 - HTTP methods (GET, POST, PUT, DELETE)
 - JSON structure design
 
----
+<br>
 
 #### Testing & Debugging
 
@@ -106,7 +106,7 @@
 - Structured logging
 - Error handling patterns
 
----
+<br>
 
 #### Deployment Basics
 
@@ -116,11 +116,11 @@
 
 - Standard production environment tool
 - Ensures consistent runtime across systems
+- 
+<br>
 
+### Supporting Engineering Tools
 ---
-
-### 3. Supporting Engineering Tools
-
 #### Version Control
 
 - Git
