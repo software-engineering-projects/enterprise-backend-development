@@ -60,7 +60,6 @@ AUTH -.-> ERR
 BL -.-> ERR
 DAL -.-> ERR
 ```
----
 <br>
 
 ## Core Components of a Backend System
