@@ -13,7 +13,7 @@ graph TD
 ```
 <br>
 
-#### 1. Backend (The Monolith)
+### 1. Backend (The Monolith)
 ---
 **Tech:** Node.js + Express  
 This is your actual "Monolith" system. It handles everything in one place:
@@ -23,14 +23,14 @@ This is your actual "Monolith" system. It handles everything in one place:
 *   **Database Queries:** Communicating with PostgreSQL.
 <br>
 
-#### 2. Database
+### 2. Database
 ---
 **Tech:** PostgreSQL  
 The persistent storage layer. It stores all your application data (Users, Orders, Products, etc.) in relational tables.
 <br>
 <br>
 
-#### 3. pgAdmin 4
+### 3. pgAdmin 4
 ---
 **Tech:** GUI Management Tool  
 *Note: This is **not** part of your app's runtime.*
@@ -39,7 +39,7 @@ The persistent storage layer. It stores all your application data (Users, Orders
 *   Inspect data integrity.
 <br>
 
-#### 4. Optional Frontend
+### 4. Optional Frontend
 ---
 **Tech:** React, Vue, or plain HTML/CSS  
 The user interface that talks to your backend via HTTP/REST.
@@ -107,8 +107,8 @@ Building this locally allows you to simulate real enterprise behavior:
 | **pgAdmin 4** | **Database Viewer** (Management Tool) |
 | **VS Code** | **Development Environment** (Code Editor) |
 
----
+<br>
 
 ## 🚀 Bottom Line
-
+---
 **Yes**—you can build a fully realistic monolith system locally that behaves exactly like production. It consists of one backend app, one database, real API flows, and professional debugging tools.
