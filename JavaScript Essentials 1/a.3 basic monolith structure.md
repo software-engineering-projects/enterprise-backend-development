@@ -1,9 +1,9 @@
 
-# 🧠 What a Local Monolith Setup Actually Looks Like
+## 🧠 What a Local Monolith Setup Actually Looks Like
 
 You can simulate a production-grade enterprise environment right on your local machine. Here is the breakdown of a classic monolithic architecture.
 
-## 🏗️ Typical Local Monolith Stack
+### 🏗️ Typical Local Monolith Stack
 
 ```mermaid
 graph TD
@@ -11,33 +11,38 @@ graph TD
     B -->|SQL Queries| C[(🟡 Database: PostgreSQL)]
     D[🔵 pgAdmin 4] -.->|Inspect/Manage| C
 ```
+<br>
 
-### 🟢 1. Backend (The Monolith)
+#### 1. Backend (The Monolith)
 **Tech:** Node.js + Express  
 This is your actual "Monolith" system. It handles everything in one place:
 *   **Routing:** Directing requests to the right place.
 *   **Business Logic:** The "brains" of your app (e.g., calculating discounts).
 *   **Authentication:** Verifying users (JWT, Cookies).
 *   **Database Queries:** Communicating with PostgreSQL.
+<br>
 
-### 🟡 2. Database
+#### 2. Database
 **Tech:** PostgreSQL  
 The persistent storage layer. It stores all your application data (Users, Orders, Products, etc.) in relational tables.
+<br>
 
-### 🔵 3. pgAdmin 4
+#### 3. pgAdmin 4
 **Tech:** GUI Management Tool  
 *Note: This is **not** part of your app's runtime.*
 *   View tables and schemas visually.
 *   Run manual SQL queries for testing.
 *   Inspect data integrity.
+<br>
 
-### 🟣 4. Optional Frontend
+#### 4. Optional Frontend
 **Tech:** React, Vue, or plain HTML/CSS  
 The user interface that talks to your backend via HTTP/REST.
 
 ---
+<br>
 
-## 🧪 What Makes it a “Monolith”?
+### 🧪 What Makes it a “Monolith”?
 
 Your Node.js app is considered a monolith because **one single codebase** contains all your domains:
 
@@ -48,8 +53,9 @@ Your Node.js app is considered a monolith because **one single codebase** contai
 **One codebase = One deployment unit.**
 
 ---
+<br>
 
-## 🛠️ Example Project Structure
+### 🛠️ Example Project Structure
 
 ```text
 project/
@@ -64,8 +70,9 @@ project/
 ```
 
 ---
+<br>
 
-## 🔁 Local Request Flow
+### 🔁 Local Request Flow
 
 1.  **Frontend** sends a `POST /orders` request.
 2.  **Express Router** receives the request in `server.js`.
@@ -76,8 +83,9 @@ project/
 7.  *(Optional)* You check **pgAdmin 4** to see the new row in the table.
 
 ---
+<br>
 
-## 🧠 Why This Setup is Powerful
+### 🧠 Why This Setup is Powerful
 
 Building this locally allows you to simulate real enterprise behavior:
 
@@ -88,8 +96,9 @@ Building this locally allows you to simulate real enterprise behavior:
 | **Debugging Realism** | Server logs, request tracing, and SQL inspection. |
 
 ---
+<br>
 
-## ⚠️ Key Clarification
+### ⚠️ Key Clarification
 
 | Tool | Role |
 | :--- | :--- |
