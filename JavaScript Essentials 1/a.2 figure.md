@@ -66,3 +66,34 @@ GW --> TRACE
 
 GW --> CLIENT
 ```
+<b>
+---
+  
+## Monolith
+```mermaid
+flowchart LR
+
+CLIENT[Client Side Web / Mobile Apps]
+
+CDN[CDN Static Assets]
+LB[Load Balancer]
+APP[Monolithic Application]
+
+DB[(Database)]
+CACHE[(Cache Redis)]
+SEARCH[(Search Index)]
+
+LOGS[Logging]
+MONITOR[Monitoring Metrics]
+
+CLIENT --> CDN --> LB --> APP
+
+APP --> DB
+APP --> CACHE
+APP --> SEARCH
+
+APP --> LOGS
+APP --> MONITOR
+
+APP --> CLIENT
+```
