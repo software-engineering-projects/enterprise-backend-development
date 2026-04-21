@@ -3,6 +3,7 @@
 
 JavaScript is powerful and widely used, but it is not universally optimal. Its limitations matter most when you understand **where it runs** (browser vs. server) and **how exposed your code is.**
 <b>
+<b>
 
 ## 🧠 What This Means for Backend Development
 
