@@ -49,7 +49,7 @@ JavaScript is no longer a "toy" language or just for UI animations. It is a matu
 
 <br>
    
-### 🔄 The Professional Mental Model
+#### 🔄 The Professional Mental Model
 
 Stop thinking about language limitations as "weaknesses" and start seeing them as **architectural constraints.**
 
@@ -60,7 +60,8 @@ Stop thinking about language limitations as "weaknesses" and start seeing them a
 | "I'll use JS for everything." | "I'll use the best tool for the specific performance need." |
 
 ---
+<br>
 
-### ✅ One-Line Summary
+#### ✅ One-Line Summary
 
 > JavaScript is a flexible backend language, but real backend design is about **choosing the right tool**, **enforcing security on the server**, and **designing around exposure** rather than fearing it.
