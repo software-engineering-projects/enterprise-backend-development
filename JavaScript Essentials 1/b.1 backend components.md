@@ -63,8 +63,7 @@ DAL -.-> ERR
 ---
 
 ## Core Components of a Backend System
-
-A backend system is a pipeline that receives requests, processes data, and returns responses.
+- A backend system is a pipeline that receives requests, processes data, and returns responses.
 <br>
 <br>
 ---
