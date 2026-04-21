@@ -1,6 +1,3 @@
-This is a clean, organized, and visual GitHub-friendly Markdown version of your content. You can copy-paste this directly into a `README.md` file.
-
-***
 
 # 🧠 What a Local Monolith Setup Actually Looks Like
 
