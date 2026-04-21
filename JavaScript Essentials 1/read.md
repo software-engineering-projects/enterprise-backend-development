@@ -1,8 +1,8 @@
 ```
 Learning Approach (Backend-Oriented)
-  • Treat the course as a concept source, not the end goal
-  • Extract backend-relevant ideas instead of just finishing modules
-  • Focus on data handling, logic, and structure
+• Treat the course as a concept source, not the end goal
+• Extract backend-relevant ideas instead of just finishing modules
+• Focus on data handling, logic, and structure
 
 • 3-Phase Learning Cycle
   • Phase A: Understand
@@ -21,7 +21,7 @@ Learning Approach (Backend-Oriented)
     • Frame tasks like real backend scenarios
     • Simulate APIs or user data handling
 
-• Module Approach
+Module Approach
   • Module 1: Mental Model
     • Understand program flow: input → process → output
     • Think about how servers respond to requests
@@ -41,30 +41,30 @@ Learning Approach (Backend-Oriented)
     • Focus on error handling and debugging
     • Ensure controlled system behavior
 
-• Pacing
+Pacing
   • 1 module every 4–6 days
   • Apply concepts daily
   • Adjust if:
     • Understanding without application → too fast
     • Over-focusing on syntax → too slow
 
-• Weekly Structure
+Weekly Structure
   • Day 1–2: Learn concepts
   • Day 3–4: Apply in backend scenarios
   • Day 5: Build a small system
   • Day 6–7: Review and refine
 
-• When to Introduce Backend Tools
+When to Introduce Backend Tools
   • Start around Module 4
   • Explore Node.js
   • Practice real input/output handling
 
-• Common Mistakes
+Common Mistakes
   • Overvaluing syntax instead of logic and structure
   • Skipping foundational topics like loops and functions
   • Delaying building and application
 
-• Mindset Shift
+Mindset Shift
   • From: learning JavaScript
   • To: understanding how backend systems process data using JavaScript
 ```
