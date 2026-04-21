@@ -1,8 +1,8 @@
 ```
 Learning Approach (Backend-Oriented)
-• Treat the course as a concept source, not the end goal
-• Extract backend-relevant ideas instead of just finishing modules
-• Focus on data handling, logic, and structure
+  • Treat the course as a concept source, not the end goal
+  • Extract backend-relevant ideas instead of just finishing modules
+  • Focus on data handling, logic, and structure
 
 • 3-Phase Learning Cycle
   • Phase A: Understand
