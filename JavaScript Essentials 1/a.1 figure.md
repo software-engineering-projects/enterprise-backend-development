@@ -1,3 +1,4 @@
+```mermaid
 flowchart TD
 
 %% =========================
@@ -90,3 +91,4 @@ end
 M1[How does backend process this?]
 M2[What data is handled?]
 M3[What response is returned?]
+```
