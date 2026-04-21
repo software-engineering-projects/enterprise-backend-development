@@ -2,6 +2,25 @@
 flowchart LR
 
 %% Client Side
+CLIENT[Client-Side<br/>Browser / App]
+
+%% Interaction
+API[HTTP / API Layer]
+
+%% Server Side
+SERVER[Server-Side<br/>Backend System]
+
+DB[(Database)]
+
+%% Flow
+CLIENT -->|Request| API --> SERVER --> DB
+DB --> SERVER --> API -->|Response| CLIENT
+```
+---
+```mermaid
+flowchart LR
+
+%% Client Side
 subgraph CLIENT[Client-Side]
 C1[UI Layer HTML CSS JS]
 C2[User Interaction Clicks Inputs]
