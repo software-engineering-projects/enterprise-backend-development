@@ -12,7 +12,7 @@ LB[Load Balancer]
 GW[API Gateway Routing Rate Limiting Auth]
 
 %% BACKEND SERVICES
-subgraph BACKEND[Backend Services Microservices]
+subgraph BACKEND[Backend Microservices]
 AUTH[Auth Service Login Tokens]
 USER[User Service]
 ORDER[Order Service]
