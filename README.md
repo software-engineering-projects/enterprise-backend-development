@@ -1,20 +1,21 @@
 # enterprise-backend-development
 A structured roadmap for backend engineering using TypeScript and Node.js. Covers APIs, databases, authentication, system design, debugging, and deployment basics. Focused on building deterministic backend systems with clear contracts, clean architecture, and production-ready thinking.
+---
 
-# Core Programming Stack (Clean Backend Path)
+## Core Programming Stack (Clean Backend Path)
 
 A structured roadmap for learning backend engineering with a focus on deterministic systems, scalable APIs, and production-ready development.
 
 ---
 
-## 1. Core Programming Language (Foundation)
+### 1. Core Programming Language (Foundation)
 
-### Primary (Choose ONE as main)
+#### Primary (Choose ONE as main)
 
 - **JavaScript + TypeScript**
 - **Node.js runtime**
 
-### Why this choice matters
+#### Why this choice matters
 
 - Fast transition from frontend knowledge
 - Widely used in backend APIs and microservices
@@ -25,12 +26,12 @@ A structured roadmap for learning backend engineering with a focus on determinis
 
 ---
 
-### Enterprise-heavy alternative (optional later)
+#### Enterprise-heavy alternative (optional later)
 
 - **Java**
 - **Spring Boot**
 
-### Why it exists
+#### Why it exists
 
 - Strong enterprise adoption (banks, telecom, insurance)
 - Highly structured backend patterns
@@ -40,12 +41,12 @@ A structured roadmap for learning backend engineering with a focus on determinis
 
 ---
 
-### Supporting language (optional)
+#### Supporting language (optional)
 
 - **Python**
 - FastAPI / Django
 
-### Use cases
+#### Use cases
 
 - Automation
 - Scripting
@@ -55,9 +56,9 @@ A structured roadmap for learning backend engineering with a focus on determinis
 
 ---
 
-## 2. Core Backend Tools (Engineering Layer)
+### 2. Core Backend Tools (Engineering Layer)
 
-### API Frameworks
+#### API Frameworks
 
 - Express (Node.js)
 - NestJS (structured, enterprise-style)
@@ -67,7 +68,7 @@ A structured roadmap for learning backend engineering with a focus on determinis
 
 ---
 
-### Database Layer (Critical)
+#### Database Layer (Critical)
 
 - PostgreSQL
 
@@ -81,7 +82,7 @@ A structured roadmap for learning backend engineering with a focus on determinis
 
 ---
 
-### Authentication & Security
+#### Authentication & Security
 
 - JWT authentication
 - Session-based authentication basics
@@ -89,7 +90,7 @@ A structured roadmap for learning backend engineering with a focus on determinis
 
 ---
 
-### API Communication
+#### API Communication
 
 - REST APIs (core requirement)
 - HTTP methods (GET, POST, PUT, DELETE)
@@ -97,7 +98,7 @@ A structured roadmap for learning backend engineering with a focus on determinis
 
 ---
 
-### Testing & Debugging
+#### Testing & Debugging
 
 - Postman (API testing)
 - Structured logging
@@ -105,7 +106,7 @@ A structured roadmap for learning backend engineering with a focus on determinis
 
 ---
 
-### Deployment Basics
+#### Deployment Basics
 
 - Docker
 
@@ -116,30 +117,30 @@ A structured roadmap for learning backend engineering with a focus on determinis
 
 ---
 
-## 3. Supporting Engineering Tools
+### 3. Supporting Engineering Tools
 
-### Version Control
+#### Version Control
 
 - Git
 - GitHub
 
 ---
 
-### Environment Management
+#### Environment Management
 
 - Node Version Manager (nvm)
 - Environment variables (`.env`)
 
 ---
 
-### Logging & Observability (Basic Stage)
+#### Logging & Observability (Basic Stage)
 
 - Structured console logs
 - Request tracing mindset
 
 ---
 
-### Cloud Deployment (Later Stage)
+#### Cloud Deployment (Later Stage)
 
 - Render
 - Railway
@@ -147,28 +148,28 @@ A structured roadmap for learning backend engineering with a focus on determinis
 
 ---
 
-## 4. Mental Model (Important Abstraction Layer)
+### 4. Mental Model (Important Abstraction Layer)
 
 Think in layers:
 
-### Language Layer
+#### Language Layer
 - JavaScript / TypeScript handles logic
 
-### Framework Layer
+#### Framework Layer
 - Node.js + Express/NestJS handles structure
 
-### Data Layer
+#### Data Layer
 - PostgreSQL handles persistence
 
-### System Layer
+#### System Layer
 - APIs + authentication enforce rules
 
-### Execution Layer
+#### Execution Layer
 - Logs + debugging explain behavior
 
 ---
 
-## 5. What to Avoid Early (Prevent Cognitive Overload)
+### 5. What to Avoid Early (Prevent Cognitive Overload)
 
 Avoid early focus on:
 
@@ -176,16 +177,16 @@ Avoid early focus on:
 - Dashboards and BI tools
 - Analytics interpretation tools
 
-### Reason
+#### Reason
 
 - These introduce external interpretation loops
 - They shift focus away from deterministic backend systems
 
 ---
 
-## 6. Final Structured Path
+### 6. Final Structured Path
 
-### Recommended stack sequence
+#### Recommended stack sequence
 
 1. JavaScript → TypeScript
 2. Node.js
@@ -196,7 +197,7 @@ Avoid early focus on:
 
 ---
 
-### Optional extensions later
+#### Optional extensions later
 
 - Python (support role)
 - Java + Spring Boot (enterprise path)
@@ -204,7 +205,7 @@ Avoid early focus on:
 
 ---
 
-## 7. Core Principle
+### 7. Core Principle
 
 The goal is not tool accumulation.
 
