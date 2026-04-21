@@ -3,7 +3,7 @@
 
 JavaScript is powerful and widely used, but it is not universally optimal. Its limitations matter most when you understand **where it runs** (browser vs. server) and **how exposed your code is.**
 
----
+<b>
 
 ## 🧠 What This Means for Backend Development
 
@@ -47,6 +47,8 @@ JavaScript is no longer a "toy" language or just for UI animations. It is a matu
 
 ---
 
+<b>
+   
 ### 🔄 The Professional Mental Model
 
 Stop thinking about language limitations as "weaknesses" and start seeing them as **architectural constraints.**
