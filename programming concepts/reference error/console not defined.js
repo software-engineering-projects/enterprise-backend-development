@@ -3,7 +3,7 @@ function checkUser(user) {
           console.log("invalid user");
      }
 
-     comsole.log("valid user");
+     comsole.log("valid user"); // wrong spelling 'comsole'
      } 
     
 checkUser({ name: "null" });
