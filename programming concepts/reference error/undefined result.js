@@ -28,7 +28,6 @@ checkObject({ data });
 }
 
 // So inside your function:
-
 obj = { data: { name: 1, age: 2 } }
 obj.name = undefined
 obj.age = undefined
