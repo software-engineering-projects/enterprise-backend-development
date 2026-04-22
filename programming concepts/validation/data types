@@ -1,4 +1,4 @@
-```
+
 The 4 real purposes of data types in backend systems
 
 • When engineers choose a type, they are enforcing one or more of these:
@@ -38,7 +38,7 @@ The 4 real purposes of data types in backend systems
 • Core idea
 
   • Data types are not just labels
-```
+
   • They are enforcement mechanisms for:
     • meaning
     • constraints
