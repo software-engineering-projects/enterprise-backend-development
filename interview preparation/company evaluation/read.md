@@ -1,3 +1,4 @@
+```
 What Companies Actually Evaluate
 
 Most backend interviews (especially Node.js / TypeScript roles) evaluate 4 pillars:
@@ -31,3 +32,4 @@ Pro-tip for GitHub
 
     > [!NOTE]
     > These criteria are specifically tailored for Node.js / TypeScript backend roles.
+```
