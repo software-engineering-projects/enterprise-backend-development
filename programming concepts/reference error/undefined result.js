@@ -33,3 +33,20 @@ checkObject({ data });
 obj = { data: { name: 1, age: 2 } }
 obj.name = undefined
 obj.age = undefined
+
+/*
+SOLUTION:
+- remove the curly braces {} and directly pass 'data'
+*/
+
+function checkObject(obj) {
+     if (!obj.name || !obj.age) { 
+          console.log("falsy");
+     } else {
+          console.log("not falsy");
+     }
+     }
+checkObject(data); // --> removing the {}
+
+
+
