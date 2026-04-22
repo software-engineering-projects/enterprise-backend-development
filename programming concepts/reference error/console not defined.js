@@ -22,3 +22,18 @@ WRONG
 CORRECT
 • console.log("test");
 */
+
+// SOLUTION:
+
+function checkUser(user) {
+     if (!user.name) {
+          console.log("invalid user");
+
+     } else {
+          console.log("valid user");
+     }
+     } 
+    
+checkUser({ name: null });
+
+// output: invalid user
