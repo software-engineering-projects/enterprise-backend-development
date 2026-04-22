@@ -1,0 +1,59 @@
+OBJECT (JavaScript)
+
+  • Definition
+    • An object is a non-primitive value
+    • It is a collection of key → value pairs
+    • Used to store structured data and optionally behavior (functions)
+
+  • Structure
+    • key (property name)
+    • value (data or function)
+
+  • Example (plain object)
+    • { name: "Alice", age: 20 }
+
+Core Characteristics
+
+  • Stored by reference (not copied directly)
+  • Mutable (can be changed after creation)
+  • Can contain:
+    • primitives
+    • other objects
+    • arrays
+    • functions (methods)
+
+Types of Objects in JavaScript
+
+  • Plain Object (Object Literal)
+    • { name: "Alice" }
+
+  • Array (ordered object)
+    • [1, 2, 3]
+
+  • Function (callable object)
+    • function () {}
+
+  • Class Instance (custom object)
+    • new User("Alice")
+
+  • Built-in Objects
+    • new Date()
+    • new Map()
+    • new Set()
+    • /abc/ (RegExp)
+
+Not Objects (Primitives)
+
+  • string → "hello"
+  • number → 42
+  • boolean → true
+  • null
+  • undefined
+  • bigint
+  • symbol
+
+Final Mental Model
+
+  • Object = structured container of key-value pairs
+  • Can hold both data and behavior
+  • Everything that is NOT a primitive is considered an object in JavaScript
