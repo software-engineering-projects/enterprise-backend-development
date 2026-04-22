@@ -1,11 +1,11 @@
-# 📌 Validation Execution Strategies (Concept Overview)
+## 📌 Validation Execution Strategies (Concept Overview)
 
 When validating data inside a function, there are three main execution strategies.
 
+<br>
+
+### 1. Fail-Fast (Stop Immediately)
 ---
-
-## 1. Fail-Fast (Stop Immediately)
-
 **Idea:** Stop execution as soon as the first error is found.
 
 *   **Behavior:**
@@ -19,8 +19,10 @@ When validating data inside a function, there are three main execution strategie
     *   Authentication checks
     *   Critical input guards
 
-## 2. Full Validation (Run Everything)
+ <br>
 
+### 2. Full Validation (Run Everything)
+---
 **Idea:** Run all validation checks no matter what happens.
 
 *   **Behavior:**
@@ -33,8 +35,10 @@ When validating data inside a function, there are three main execution strategie
     *   Form validation (show all errors at once)
     *   User input feedback systems
 
-## 3. Accumulated Errors (Hybrid Approach)
-
+<br>
+ 
+### 3. Accumulated Errors (Hybrid Approach)
+---
 **Idea:** Run all checks, but store errors instead of stopping.
 
 *   **Behavior:**
@@ -47,10 +51,10 @@ When validating data inside a function, there are three main execution strategie
     *   Backend validation systems
     *   Structured error reporting APIs
     *   Complex form systems
+ 
+<br>
 
----
-
-## 📌 Key distinction between the 3
+### 📌 Key distinction between the 3
 
 | Strategy | Execution | Error Handling |
 | :--- | :--- | :--- |
@@ -58,9 +62,9 @@ When validating data inside a function, there are three main execution strategie
 | **Full Validation** | Runs everything | Ignores intermediate failure state |
 | **Accumulated** | Runs everything | Tracks/Collects every failure |
 
----
+<br>
 
-## 🧠 Final Takeaway
+### 🧠 Final Takeaway
 
 Right now, your code sits between:
 1.  **Full validation** (because everything runs)
