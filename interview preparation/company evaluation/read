@@ -1,0 +1,33 @@
+What Companies Actually Evaluate
+
+Most backend interviews (especially Node.js / TypeScript roles) evaluate 4 pillars:
+
+  • Coding / Problem Solving
+    • Basic algorithms (not hardcore competitive level)
+    • Data handling
+    • Clean logic
+
+  • Backend Fundamentals
+    • APIs
+    • Databases
+    • Authentication
+    • Error handling
+
+  • System Design (Entry → Mid level)
+    • How you structure a service
+    • How you think about scaling
+    • Trade-offs
+
+  • Communication (Very underrated)
+    • Clarity
+    • Structured thinking
+    • Explaining decisions
+
+Pro-tip for GitHub
+
+  • If you want to highlight Node.js / TypeScript note
+
+  • Use GitHub alert style:
+
+    > [!NOTE]
+    > These criteria are specifically tailored for Node.js / TypeScript backend roles.
