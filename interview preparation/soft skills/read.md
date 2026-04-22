@@ -1,3 +1,4 @@
+```
 Soft Skills (THIS is where many fail)
 
 • Structured thinking (critical)
@@ -41,3 +42,4 @@ Honesty under uncertainty
   • Why this works:
     • Better than guessing blindly
     • Shows reasoning ability
+```
