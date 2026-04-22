@@ -32,7 +32,7 @@ function dataCheck(data) {
           console.log(`${normalizesex} is not a valid category`);
           return "Error";
        }
-    }
+      }
 
 
 function callFunction(arg1, arg2) {
@@ -42,10 +42,10 @@ function callFunction(arg1, arg2) {
 
      if (validate(data) === "Success") {
           console.log("data is valid");
-     } else {
-          console.log("data is invalid");
-     }
-   }       
+          } else {
+               console.log("data is invalid");
+          }
+     }       
 
 const data = metaData('John', 24, 'FEmaLe');
 
