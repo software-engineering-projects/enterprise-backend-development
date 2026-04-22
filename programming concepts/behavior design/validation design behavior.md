@@ -1,6 +1,6 @@
 ## 📌 Validation Execution Strategies (Concept Overview)
 
-When validating data inside a function, there are three main execution strategies.
+- When validating data inside a function, there are three main execution strategies.
 
 <br>
 
