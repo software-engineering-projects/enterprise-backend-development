@@ -17,7 +17,6 @@ function dataCheck(data) {
           console.log(`${data.name} is not a valid name`);
           return "Error";
                   
-
         } else {
           console.log(`${data.name} is a valid name`);
 
@@ -28,7 +27,6 @@ function dataCheck(data) {
           console.log(`${data.age} is not a valid age`);
           return "Error";
                  
-
         } else {
           console.log(`${data.age} is a valid age`);
 
@@ -38,7 +36,6 @@ function dataCheck(data) {
           
           console.log(`${normalizesex} is not a valid category`);
           return "Error";
-                 
 
        } else {
           console.log(`${normalizesex} is a valid category`);
