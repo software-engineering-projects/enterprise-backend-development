@@ -1,5 +1,5 @@
 /*
-🧠 1. What a debugger actually is (backend meaning)
+1. What a debugger actually is (backend meaning)
 
 - A debugger is:
   - A controlled way to pause a running program
@@ -15,7 +15,7 @@
   - You are inspecting a live system while it runs
   - You observe execution, not just final output
 
-🧩 2. Core idea of debugging
+2. Core idea of debugging
 
 - Key principle:
   - Errors are not obvious
@@ -24,7 +24,7 @@
 - Everything else (tools, UI, shortcuts):
   - Are just implementation details
 
-⚙️ 3. Your current setup vs a real debugger
+3. Your current setup vs a real debugger
 
 - You are using:
   - Deno
@@ -51,7 +51,7 @@
   4. Deno runtime inspection (advanced)
      - not required at this stage
 
-🧠 4. Backend debugging concept
+4. Backend debugging concept
 
 - Debugging in backend systems means:
   - Tracing data flow through the system
@@ -69,7 +69,7 @@
 - Core idea:
   - Debugging = understanding data movement through logic
 
-🔥 5. What to practice now
+5. What to practice now
 
 - Focus on manual debugging using code + logs
 
@@ -114,7 +114,7 @@ Exercise 3: Manual breakpoint simulation
 
 - This mimics a debugger workflow without tools
 
-🧭 6. When browser debugger is actually needed
+6. When browser debugger is actually needed
 
 - Use browser dev tools when working with:
   - frontend UI (HTML/CSS/DOM)
@@ -124,7 +124,7 @@ Exercise 3: Manual breakpoint simulation
 - Not needed for your current stage:
   - backend logic learning
 
-⚠️ 7. Common misunderstanding
+7. Common misunderstanding
 
 - Incorrect assumption:
   - "I need advanced debugger tools before coding"
@@ -136,7 +136,7 @@ Exercise 3: Manual breakpoint simulation
   4. Understand failure
   5. Then learn advanced tools
 
-🚀 Final takeaway
+Final takeaway
 
 - Your current debugging toolkit is enough:
 
