@@ -1,0 +1,59 @@
+Logical NOT Operator (!)
+
+  • How it works
+    • !value converts the value to boolean, then inverts it
+    • truthy → false
+    • falsy → true
+
+  • if (!condition)
+    • Runs only when condition is falsy
+
+Common Falsy Values
+
+  • false
+  • 0
+  • "" (empty string)
+  • null
+  • undefined
+  • NaN
+
+Practical Examples
+
+  • Checking for empty string
+    • const name = ""
+    • if (!name)
+      • This runs because "" is falsy
+
+  • Checking number input
+    • const age = 0
+    • if (!age)
+      • This runs because 0 is falsy
+      • Problem: 0 might be valid, but treated as missing
+
+  • Checking undefined
+    • let user
+    • if (!user)
+      • Runs because undefined is falsy
+
+Key Pitfall
+
+  • !value does NOT mean "value does not exist"
+  • It means "value is falsy"
+
+Safer Alternatives
+
+  • Check for null or undefined only
+    • value == null
+      • true for null and undefined
+
+  • Check explicitly
+    • value === undefined
+    • value === null
+
+  • For numbers
+    • typeof value !== "number"
+
+Mental Model
+
+  • !value = “Is this value falsy?”
+  • Not = “Does this value exist?”
