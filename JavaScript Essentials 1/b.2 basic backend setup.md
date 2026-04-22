@@ -22,9 +22,9 @@ project/
 ```
 ---
 ```
-• You are not just organizing files
+You are not just organizing files
 
-• You are learning:
+You are learning:
 
   • Separation of concerns
     • routes → where request goes
@@ -35,20 +35,20 @@ project/
 
   • This is how backend systems scale
 
-• Data flow thinking
+Data flow thinking
 
   • Request → Route → Controller → Service → Model → Response
 
   • You are building a mental backend pipeline
 
-• Modularity
+Modularity
 
   • Instead of one large file doing everything
   • Each responsibility gets its own module
 
   • Core backend skill: separation of responsibilities
 
-• Important limitation
+Important limitation
 
   • This is still a logical architecture simulation
 
@@ -64,13 +64,13 @@ project/
     • Mental backend system (simulated)
     • Not production backend system (live traffic)
 
-• Why this is effective
+Why this is effective
 
   • Avoids premature tool dependency
   • Prevents learning frameworks before fundamentals
   • Builds architectural understanding first
 
-• Key mindset shift
+Key mindset shift
 
   • Not:
     • “I am organizing folders”
