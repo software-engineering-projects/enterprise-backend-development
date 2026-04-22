@@ -1,0 +1,45 @@
+```
+The 4 real purposes of data types in backend systems
+
+• When engineers choose a type, they are enforcing one or more of these:
+
+• 1. Meaning (what the data represents)
+
+  • age → numeric value of time lived
+  • email → structured identifier
+  • userId → unique identity
+
+  • Purpose
+    • Prevents confusion about what the data represents
+    • Makes intent explicit in the system
+
+• 2. Constraints (what is allowed)
+
+  • number → must stay within numeric bounds
+  • string → may have length or format rules
+  • boolean → only two states (true / false)
+
+  • Purpose
+    • Prevents invalid data from entering the system
+    • Enforces correctness at the type level
+
+• 3. Behavior (how it can be used)
+
+  • Questions types define:
+    • Can it be compared?
+    • Can it be ordered?
+    • Can it be looped over?
+    • Can it be computed?
+
+  • Purpose
+    • Defines what operations are valid on the data
+    • Controls how the system can manipulate values
+
+• Core idea
+
+  • Data types are not just labels
+```
+  • They are enforcement mechanisms for:
+    • meaning
+    • constraints
+    • behavior
