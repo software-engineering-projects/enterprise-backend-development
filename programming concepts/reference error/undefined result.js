@@ -27,6 +27,8 @@ checkObject({ data });
   }
 }
 
+// You wrapped data which is a dictionary into another dictionary by enclosing it w/ {} 
+
 // So inside your function:
 obj = { data: { name: 1, age: 2 } }
 obj.name = undefined
