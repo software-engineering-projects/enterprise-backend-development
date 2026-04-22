@@ -17,11 +17,9 @@ checkObject({ data });
 checkObject({ data });
 
 // This does not pass:
-
 { name: 1, age: 2 }
 
 // It passes this:
-
 {
   data: {
     name: 1,
