@@ -20,4 +20,7 @@
     - [Code](https://github.com/manikbajaj/typescript-design-patterns/tree/single-responsibility-principle-intro) 
   - Open Closed Principle
     - [Lecture](https://cloudaffle.com/series/solid-design-principles/open-closed-principle/)
-    - [Code](https://github.com/manikbajaj/typescript-design-patterns/tree/open-close-principle) 
+    - [Code](https://github.com/manikbajaj/typescript-design-patterns/tree/open-close-principle)
+  - Dependency Inversion Principle
+    - [Lecture](https://cloudaffle.com/series/solid-design-principles/dependency-inversion-principle/)
+    - [Code](https://github.com/manikbajaj/typescript-design-patterns/tree/dependency-inversion-principle) 
