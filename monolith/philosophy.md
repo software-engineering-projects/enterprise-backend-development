@@ -10,13 +10,13 @@ It is:
 ## 🎯 Core Philosophy
 
 ### 1. "One brain, many responsibilities"
-    Instead of splitting logic across services like:
+Instead of splitting logic across services like:
     *   `auth-service`
     *   `user-service`
     *   `billing-service`
-    
-    You have:
-    *   🧠 **One application** that contains all of them internally.
+
+You have:
+*   🧠 **One application** that contains all of them internally.
 
 ### 2. "Internal communication is free"
 Inside a monolith, function calls replace network calls. There is **no HTTP overhead** between modules.
