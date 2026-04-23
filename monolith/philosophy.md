@@ -90,7 +90,7 @@ SYSTEM MODEL
   • Place orders
   • Search products
   
-  ---
+---
   
   CLIENT LAYER
   
@@ -110,7 +110,7 @@ SYSTEM MODEL
   • No database access
   • No decision-making logic
   
-  ---
+---
   
   EDGE LAYER
   
@@ -126,7 +126,7 @@ SYSTEM MODEL
   • Reduces backend load
   • Improves response time through caching
   
-  ---
+---
   
   LOAD BALANCER
   
