@@ -14,3 +14,7 @@
     - [Code](https://github.com/manikbajaj/typescript-design-patterns/tree/polymorphism)
   - [Use Cases](https://cloudaffle.com/series/object-oriented-typescript/polymorphism-by-example/)
   - [Advantages](https://cloudaffle.com/series/object-oriented-typescript/polymorphism-by-example/#the-power-of-polymorphism)
+- SOLID Principle
+  - Single Responsibility Principle
+    - [Lecture](https://cloudaffle.com/series/solid-design-principles/single-responsibility-principle/)
+    - [Code](https://github.com/manikbajaj/typescript-design-patterns/tree/single-responsibility-principle-intro) 
