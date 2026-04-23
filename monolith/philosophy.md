@@ -163,6 +163,74 @@ graph TD
   C --> A
 ```
 ```
+graph TD
+
+%% =======================
+%% HEADERS (VISUAL TITLES)
+%% =======================
+CLIENT_TITLE["CLIENT (Untrusted Boundary)"]
+EDGE_TITLE["EDGE LAYER (Server Infrastructure)"]
+APP_TITLE["APPLICATION LAYER (Monolith Server)"]
+DATA_TITLE["DATA LAYER (Server Systems)"]
+
+%% =======================
+%% CLIENT
+%% =======================
+subgraph CLIENT
+  A[Web Application]
+  B[Mobile Application]
+end
+
+%% =======================
+%% EDGE
+%% =======================
+subgraph EDGE
+  C[CDN / Static Assets]
+  D[Load Balancer]
+end
+
+%% =======================
+%% APP
+%% =======================
+subgraph APP
+  E[Validation Layer]
+  F[Authentication]
+  G[Business Logic]
+  H[DB Access Layer]
+end
+
+%% =======================
+%% DATA
+%% =======================
+subgraph DATA
+  I[(PostgreSQL)]
+  J[(Redis Cache)]
+  K[(Search Index)]
+end
+
+%% =======================
+%% FLOWS
+%% =======================
+A --> C
+B --> C
+C --> D
+D --> E
+E --> F
+F --> G
+G --> H
+H --> I
+H --> J
+H --> K
+
+%% =======================
+%% HEADER POSITIONING LINKS (visual anchoring)
+%% =======================
+CLIENT_TITLE --- A
+EDGE_TITLE --- C
+APP_TITLE --- E
+DATA_TITLE --- I
+```
+```
 MONOLITH ARCHITECTURE FLOW DOCUMENTATION
 
 ---
