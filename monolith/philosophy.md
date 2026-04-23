@@ -1,4 +1,4 @@
-# 🧠 MONOLITH INFRASTRUCTURE PHILOSOPHY
+## MONOLITH INFRASTRUCTURE PHILOSOPHY
 
 A monolith is not "simple backend code."
 
