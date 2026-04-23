@@ -74,6 +74,7 @@ A user opens your app and says: *"I want to buy headphones."*
 *   ✅ It only **sends requests** and **displays results**.
 
 ---
+<br>
 
 #### 🌍 2. EDGE LAYER (CDN + Load Balancer)
 
@@ -86,6 +87,7 @@ A user opens your app and says: *"I want to buy headphones."*
 *   **Scenario:** If you have 3 backend instances (App A, B, and C), the Load Balancer sends the request to the instance that is least busy.
 
 ---
+<br>
 
 ### 🧠 3. APPLICATION LAYER (MONOLITH CORE) ⭐
 This is the **entire brain** of your system.
@@ -97,6 +99,7 @@ This is the **entire brain** of your system.
 4.  **Order Module:** Place order, calculate total, validate stock.
 
 ---
+<br>
 
 ## 🔥 SCENARIO FLOW (VERY IMPORTANT)
 
