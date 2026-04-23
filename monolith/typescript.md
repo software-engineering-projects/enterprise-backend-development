@@ -89,12 +89,14 @@ This is the live system in action:
 ⚠️ **The Reality:** Even with perfect design (TypeScript) and perfect inspection (Validation), systems can still fail due to network outages, database deadlocks, or hardware limits.
 <br>
 <br>
+<br>
 
 ### 🧩 Key Insight: The "Inspection" Fallacy
 ---
 **TypeScript does NOT inspect a running system.**
 
 It is a common misconception that TypeScript "watches" the data in your production app. It doesn't. Instead, it validates whether the **system design is safe enough to run** before the first line of code is ever executed.
+<br>
 <br>
 <br>
 
