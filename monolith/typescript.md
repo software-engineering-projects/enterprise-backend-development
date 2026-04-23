@@ -68,12 +68,15 @@ Runtime validation (using tools like Zod, Joi, or custom logic) checks:
 
 The system is fully built, deployed, and being used. This is where the "theory" meets the "reality."
 <br>
+<br>
 
 #### 🧠 Responsibilities
 ---
 *   **Traffic Management:** Handling real user requests.
 *   **Operations:** Processing business transactions.
 *   **Resilience:** Running under load and handling unexpected environment failures.
+<br>
+<br>
 
 #### 💡 What this means in software
 ---
@@ -84,12 +87,14 @@ This is the live system in action:
 
 ⚠️ **The Reality:** Even with perfect design (TypeScript) and perfect inspection (Validation), systems can still fail due to network outages, database deadlocks, or hardware limits.
 <br>
+<br>
 
 ### 🧩 Key Insight: The "Inspection" Fallacy
 ---
 **TypeScript does NOT inspect a running system.**
 
 It is a common misconception that TypeScript "watches" the data in your production app. It doesn't. Instead, it validates whether the **system design is safe enough to run** before the first line of code is ever executed.
+<br>
 <br>
 
 ### 🧠 Why This Matters for Monolithic Architecture
