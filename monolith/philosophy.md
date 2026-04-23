@@ -123,23 +123,23 @@ This is the **entire brain** of your system.
     *   `UPDATE products SET stock = stock - 2`
 5.  **Response returned:** `200 OK` with order details.
 
----
+
 
 #### 🗄️ 4. DATA LAYER
-
+---
 *   **PostgreSQL (Primary DB):** The system of record for users, products, and orders.
 *   **Cache (Redis):** Speed layer. Returns search results instantly instead of querying the DB every time.
 *   **Search Index:** Fast search engine for queries like `"head"` → `headphones`.
-
----
+<br>
 
 #### 📊 5. OBSERVABILITY LAYER
+---
 The "nervous system" of your app.
 
 *   **Logging System:** Traces what happened (e.g., `ERROR: stock not available`).
 *   **Metrics System:** Tracks request latency, error rates, and CPU usage.
-
 ---
+<br>
 
 ## 🔁 FULL SYSTEM FLOW (COMPLETE VIEW)
 
