@@ -54,7 +54,7 @@ Monoliths are:
 ---
 <br>
 
-## 🧱 YOUR SYSTEM (MENTAL MODEL)
+## YOUR SYSTEM (MENTAL MODEL)
 
 - Let’s imagine a **User Management + Simple E-commerce System**.
 <br>
@@ -98,7 +98,7 @@ This is the **entire brain** of your system.
 4.  **Order Module:** Place order, calculate total, validate stock.
 <br>
 
-## 🔥 SCENARIO FLOW (VERY IMPORTANT)
+## SCENARIO FLOW (VERY IMPORTANT)
 
 #### 🎯 Case Study: User places an order
 
