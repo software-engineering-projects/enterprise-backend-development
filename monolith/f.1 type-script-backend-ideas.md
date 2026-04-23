@@ -1,2 +1,4 @@
 - [Why We Need Design Patterns](https://cloudaffle.com/series/typescript-design-patterns/problem-we-want-to-solve/)
-- [Abstraction](https://cloudaffle.com/series/object-oriented-typescript/abstraction-in-typescript/)
+- [Abstraction]
+  - [Lecture](https://cloudaffle.com/series/object-oriented-typescript/abstraction-in-typescript/)
+  - [Code](https://github.com/manikbajaj/typescript-design-patterns/blob/abstraction/typescript/index.ts)
