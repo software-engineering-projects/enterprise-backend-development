@@ -2,3 +2,9 @@
 - Abstraction
   - [Lecture](https://cloudaffle.com/series/object-oriented-typescript/abstraction-in-typescript/)
   - [Code](https://github.com/manikbajaj/typescript-design-patterns/blob/abstraction/typescript/index.ts)
+- Encapsulation
+  - [Lecture](https://cloudaffle.com/series/object-oriented-typescript/encapsulation-in-typescript/)
+  - [Code](https://github.com/manikbajaj/typescript-design-patterns/tree/encapsulation)
+  - Implementation
+    -  [Lecture](https://cloudaffle.com/series/object-oriented-typescript/encapsulation-in-typescript/#real-world-example)
+    -  [Code](https://github.com/manikbajaj/typescript-design-patterns/tree/abstraction-implementation)
