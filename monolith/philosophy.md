@@ -1,145 +1,168 @@
 ```
+MONOLITH INFRASTRUCTURE PHILOSOPHY AND SYSTEM MODEL
+
+---
+
 MONOLITH INFRASTRUCTURE PHILOSOPHY
 
-OVERVIEW
-  • A monolith is not a simple backend file or script
-  • It is a single deployed system that contains all business logic, rules, and decision-making
-  • It operates as one cohesive application with internal modular structure
+  Definition
+  • A monolith is not simple backend code
+  • It is a single executable system that owns all business logic, rules, and decisions
+  • It coordinates all system operations internally
 
 ---
 
-CORE PHILOSOPHY
+CORE PRINCIPLES
 
-1. ONE SYSTEM, MANY RESPONSIBILITIES
-  • The monolith contains all domains within a single application
-  • Examples of internal domains:
-    • Authentication
-    • User management
-    • Product management
-    • Order processing
-    • Payment handling
-
-  • All logic exists inside one executable system
-  • No external service boundaries for core business logic
-
----
-
-2. INTERNAL COMMUNICATION IS DIRECT
+  1. ONE BRAIN, MANY RESPONSIBILITIES
+  • All business logic exists inside one application
+  • No separation into independent services
   
+  Instead of:
+  • auth service
+  • user service
+  • billing service
+  
+  You have:
+  • one application containing all modules internally
+
+---
+
+  2. INTERNAL COMMUNICATION IS FREE
   • Function calls replace network communication
-  • No HTTP or RPC overhead between modules
+  • No HTTP or RPC between internal modules
   
-  Examples
-  • userService.createUser()
-  • orderService.createOrder()
-  • paymentService.processPayment()
+  Example
+  • userService.createUser() is a direct function call
+  • Not an HTTP request to another service
   
-  Key implication
-  • Communication is fast and deterministic
-  • No distributed system latency or failure modes between modules
+  Implication
+  • No network overhead between business modules
+  • Faster and simpler internal execution
 
 ---
 
-3. DATA CONSISTENCY IS SIMPLIFIED
-
+  3. DATA CONSISTENCY IS SIMPLIFIED
   • Single runtime environment
   • Shared database access rules
   • Unified transaction boundaries
   
-  Benefits
-  • Easier enforcement of ACID transactions
-  • Reduced risk of distributed inconsistency
-  • Simpler rollback and error handling
+  Result
+  • ACID-level consistency is easier to enforce
+  • No distributed transaction complexity
 
 ---
 
-4. COMPLEXITY IS DEFERRED, NOT ELIMINATED
-
-  • Monoliths are simple at early stages
-  • Complexity increases as system grows
-  • Refactoring into modular architecture may be required later
+  4. COMPLEXITY IS POSTPONED, NOT REMOVED
+  • Monoliths are easy to build initially
+  • Complexity increases as system scales
   
-  Key tradeoff
-  • Faster initial development
-  • Higher long-term refactoring cost if not structured properly
+  Tradeoff
+  • Faster early development
+  • Harder scaling and refactoring later
+  
+  Key idea
+  • You delay architectural complexity, not eliminate it
 
 ---
 
-5. BOUNDARIES ARE LOGICAL, NOT PHYSICAL
-
-  • System is organized into internal modules
-  • Modules are separated by code structure, not infrastructure
+  5. BOUNDARIES ARE LOGICAL, NOT PHYSICAL
+  • System is organized into modules inside one codebase
+  • Modules are not separate deployments
   
-  Typical structure
+  Examples
   • auth module
   • user module
-  • product module
-  • order module
+  • payment module
   
-  Key principle
-  • Separation exists in code organization, not deployment units
+  All exist within a single application boundary
 
 ---
 
-SYSTEM MODEL EXAMPLE
+SYSTEM MODEL
 
-DOMAIN: E-COMMERCE MONOLITH
-
-  Capabilities
-  • User registration and authentication
-  • Product browsing and search
-  • Order placement and management
-
----
-
-CLIENT LAYER
-
+  DOMAIN
+  User Management and Simple E-commerce System
+  
+  User capabilities
+  • Register and login
+  • View products
+  • Place orders
+  • Search products
+  
+  ---
+  
+  CLIENT LAYER
+  
+  Definition
+  • Frontend interface of the system
+  
   Components
   • Web application
   • Mobile application
   
   Responsibilities
-  • User interface rendering
-  • Sending API requests to backend
-  • Displaying system responses
+  • Send requests to backend system
+  • Display responses to users
   
-  Constraints
+  Restrictions
   • No business logic execution
-  • No direct data access
+  • No database access
   • No decision-making logic
-
----
-
-EDGE LAYER
   
-  CDN
-  • Serves static assets
-  • Improves frontend load performance
+  ---
+  
+  EDGE LAYER
+  
+  CDN (Content Delivery Network)
+  
+  Role
+  • Serves static assets such as:
+    • JavaScript bundles
+    • images
+    • CSS files
+  
+  Benefit
   • Reduces backend load
+  • Improves response time through caching
   
-  Load Balancer
-  • Distributes incoming traffic across application instances
-  • Improves availability and scalability
+  ---
+  
+  LOAD BALANCER
+  
+  Role
+  • Distributes incoming requests across backend instances
+  
+  Scenario
+  • Multiple application instances exist:
+    • App A
+    • App B
+    • App C
+  
+  Behavior
+  • Routes incoming request to least loaded instance
 
 ---
 
 APPLICATION LAYER (MONOLITH CORE)
 
   Definition
-  • Single application containing all business logic modules
-  
-  Internal Modules
-  
-  Authentication Module
+  • Single backend application containing all business logic
+
+---
+
+INTERNAL MODULES
+
+  Auth Module
   • User login
-  • Registration
-  • Token generation
-  • Session validation
+  • User registration
+  • Password hashing
+  • JWT token creation
   
   User Module
   • User profile management
-  • User data retrieval
   • Profile updates
+  • User lookup
   
   Product Module
   • Product listing
@@ -149,43 +172,63 @@ APPLICATION LAYER (MONOLITH CORE)
   Order Module
   • Order creation
   • Stock validation
-  • Pricing calculation
+  • Price calculation
   • Order confirmation
 
 ---
 
 SCENARIO FLOW: ORDER PLACEMENT
 
-  Input Request
-  • User submits order request with:
-    • userId
-    • productId
-    • quantity
-  
-  Processing Steps
-  
-  Validation Layer
-  • Validate user identity
-  • Validate product existence
-  • Validate quantity constraints
-  
-  Business Logic Layer
-  • Retrieve product price
-  • Check inventory availability
+  Step 1: Request
+  • Client sends request:
+    POST /orders
+    {
+      userId: 1,
+      productId: 10,
+      quantity: 2
+    }
+
+---
+
+  Step 2: Request Reception
+  • Load balancer forwards request to monolith application
+
+---
+
+  Step 3: Validation Layer
+  • Validate userId exists
+  • Validate productId exists
+  • Validate quantity is valid
+
+---
+
+  Step 4: Business Logic Execution
+  • Fetch product price
+  • Check stock availability
   • Calculate total cost
-  
-  Authentication Check
+
+---
+
+  Step 5: Authentication Check
   • Verify user session or token
-  • Confirm user authorization
-  
-  Order Execution
+  • Ensure request matches authenticated user
+
+---
+
+  Step 6: Order Execution
   • Create order record
-  • Update inventory levels
+  • Reduce inventory stock
   • Store transaction in database
-  
-  Output
-  • Return order confirmation
-  • Provide order ID and total cost
+
+---
+
+  Step 7: Response
+  • Return success response
+  • Example:
+    {
+      orderId: 999,
+      total: 1200
+    }
 
 ---
 
@@ -198,63 +241,115 @@ DATA LAYER
     • products
     • orders
   
-  Cache (Redis)
-  • Stores frequently accessed data
-  • Reduces database query load
-  • Improves response times
+  Operations
+  • Insert order records
+  • Update inventory
+  • Store user history
+
+---
+
+CACHE LAYER (REDIS)
+
+  Role
+  • High-speed temporary storage layer
   
-  Search Index
-  • Provides fast product search capability
-  • Enables partial and full-text search queries
+  Use case
+  • Cache product search results
+  
+  Benefit
+  • Reduces database load
+  • Improves response time
+
+---
+
+SEARCH INDEX
+
+  Role
+  • Enables fast search functionality
+  
+  Use case
+  • Product search queries
+  
+  Example output
+  • headphones
+  • headphone stand
+  • headphone case
 
 ---
 
 OBSERVABILITY LAYER
 
-  Logging System
-  • Captures system events and errors
-  • Used for debugging and audit trails
+  LOGGING SYSTEM
   
-  Monitoring System
-  • Tracks system performance metrics
-  • Measures latency, throughput, and error rates
+  Role
+  • Captures system events and errors
+  
+  Use case
+  • Debugging failures
+  • Tracking system behavior
+  
+  Example
+  • ERROR: stock not available
+  • userId: 1
+  • productId: 10
+
+---
+
+METRICS SYSTEM
+
+  Role
+  • Monitors system performance
+  
+  Tracks
+  • Request latency
+  • Error rates
+  • CPU usage
+  
+  Use case
+  • Detect performance degradation
+  • Identify system bottlenecks
 
 ---
 
 FULL SYSTEM FLOW
 
-  Request Flow
+  Request lifecycle
   • Client sends request
-  • CDN serves static assets if needed
-  • Load balancer forwards request
-  • Monolith processes request internally
-  • Monolith interacts with:
-    • database
-    • cache
-    • search index
+  • CDN serves static assets
+  • Load balancer routes request
+  • Monolith application processes request internally
+  • Application interacts with:
+    • PostgreSQL database
+    • Redis cache
+    • Search index
   • Response is returned to client
 
 ---
 
-KEY DESIGN CHARACTERISTICS
+KEY SYSTEM IDEA
 
-Simplicity
-• Single deployment unit
-• Unified codebase
+  • A monolith is not a single file
+  • It is a single deployment unit containing multiple internal systems
+  • It contains structured modules with clear logical separation
+  • It maintains one unified business logic source of truth
 
-Performance
-• No inter-service network overhead
-• Direct function calls internally
+---
 
-Consistency
-• Shared database transactions
-• Unified business logic execution
+PROJECT EXTENSION NOTE
 
-Scalability Limitation
-• Scaling requires full application replication
-• No independent module scaling
-
-Maintainability
-• Easier early-stage development
-• Requires strong modular code discipline to avoid complexity growth
+  Given environment context:
+  • PostgreSQL available
+  • Deno runtime available
+  • Development tools available
+  
+  Next implementation direction:
+  • Build monolithic backend system with:
+    • HTTP server
+    • authentication module
+    • user module
+    • product module
+    • order module
+    • database integration
+    • logging system
+    • validation layer
 ```
