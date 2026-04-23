@@ -97,7 +97,7 @@ APP --> MONITOR
 APP --> CLIENT
 ```
 ```
-• Monolith Architecture
+Monolith Architecture
 
   • Flow Overview
 
