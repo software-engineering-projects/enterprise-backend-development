@@ -1,24 +1,22 @@
 # 🧠 TypeScript vs. Runtime Validation vs. Execution
 
 ### *A Clean Architecture Analogy for Backend Systems*
-
-In backend systems, correctness is enforced at multiple layers. These layers operate at different times, with different responsibilities, and different levels of trust. To understand this clearly, we map them to a **building construction analogy**.
-
 ---
+In backend systems, correctness is enforced at multiple layers. These layers operate at different times, with different responsibilities, and different levels of trust. To understand this clearly, we map them to a **building construction analogy**.
 <br>
 
 ### 🏗️ Overview
-
+---
 | Layer | Analogy | Timing | Focus |
 | :--- | :--- | :--- | :--- |
 | **🟢 TypeScript** | Architect reviewing blueprints | **Design-Time** | Structural Integrity |
 | **🟡 Runtime Validation** | Engineers inspecting construction | **Request-Time** | Data Integrity |
 | **🔴 Execution** | People living in the building | **Production** | Real-world Reality |
-
----
 <br>
 
+
 ### 🟢 1. TypeScript (Design-Time Validation Layer)
+---
 > **Analogy:** *The Architect reviewing blueprints before construction starts.*
 
 At this stage, nothing is built yet. Only the design exists. The architect ensures that the system is structurally sound before a single brick is laid.
@@ -41,11 +39,10 @@ TypeScript checks your **code structure**, not **real data**. It verifies:
 *   Does **NOT** interact with live databases or APIs.
 
 > **Key Idea:** TypeScript validates whether your system **can exist** correctly, not whether it runs correctly.
-
----
 <br>
 
 ### 🟡 2. Runtime Validation (Backend / Frontend Layer)
+---
 > **Analogy:** *Engineers inspecting the building while it is being constructed.*
 
 At this stage, the system is actively running. Real inputs, real conditions, and real-world behavior are involved.
@@ -63,11 +60,10 @@ Runtime validation (using tools like Zod, Joi, or custom logic) checks:
 - **Security:** Are there unauthorized fields in the request?
 
 > **Key Idea:** Runtime validation ensures correctness while the system is **actively processing real data**.
-
----
 <br>
 
 ### 🔴 3. Execution (Production System Layer)
+---
 > **Analogy:** *People living inside the completed building.*
 
 The system is fully built, deployed, and being used. This is where the "theory" meets the "reality."
