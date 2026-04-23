@@ -199,7 +199,9 @@ types (data contracts)
 > **🧠 One-Line Takeaway:** Using Deno, you can write and run TypeScript directly with built-in type checking, making it ideal for building a modular monolith backend without a separate build step.
 ---
 ```
+=========================================
 Local TypeScript Backend Setup Using Deno
+=========================================
 
 1. Overview
 
