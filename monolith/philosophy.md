@@ -283,8 +283,6 @@ KEY ARCHITECTURAL CHARACTERISTICS
     • Growth increases internal complexity within single system boundary
 
 ---
-
-END OF DOCUMENTATION
 ```
 ---
 <br>
