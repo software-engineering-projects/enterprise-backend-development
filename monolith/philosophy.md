@@ -34,6 +34,7 @@ Because everything shares the:
 
 You can enforce **ACID-level correctness** without distributed complexity.
 <br>
+<br>
 
 ### 4. "Complexity is postponed, not removed"
 Monoliths are:
