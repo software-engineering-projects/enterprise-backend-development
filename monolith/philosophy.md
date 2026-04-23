@@ -52,6 +52,7 @@ Monoliths are:
 - You still structure code like microservices (e.g., `auth` module, `user` module, `payment` module), but they all live inside **one codebase**.
 
 ---
+<br>
 
 ## 🧱 YOUR SYSTEM (MENTAL MODEL)
 
