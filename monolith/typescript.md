@@ -112,6 +112,7 @@ TypeScript ensures that as the monolith grows:
 - Data structures remain consistent across the entire system.
 - Services interact safely without breaking distant parts of the app.
 <br>
+<br>
 
 ### 🏁 Summary
 
