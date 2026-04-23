@@ -56,7 +56,7 @@ Monoliths are:
 
 ## 🧱 YOUR SYSTEM (MENTAL MODEL)
 
-Let’s imagine a **User Management + Simple E-commerce System**.
+- Let’s imagine a **User Management + Simple E-commerce System**.
 
 #### 🌐 1. CLIENT LAYER (Web / Mobile)
 **What it is:** The UI (Browser or Mobile App).
