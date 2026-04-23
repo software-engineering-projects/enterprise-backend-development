@@ -43,6 +43,7 @@ Monoliths are:
 
 **The key idea:** You trade early simplicity for future restructuring flexibility.
 <br>
+<br>
 
 ### 5. "Boundaries are logical, not physical"
 You still structure code like microservices (e.g., `auth` module, `user` module, `payment` module), but they all live inside **one codebase**.
