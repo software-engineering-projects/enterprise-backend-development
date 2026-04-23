@@ -1,4 +1,4 @@
-# 🧠 Real-world places where values are assigned in TypeScript
+# 🧠 Real-world Application
 
 In a real backend using TypeScript, values come from **trusted internal sources**, not raw users.
 
