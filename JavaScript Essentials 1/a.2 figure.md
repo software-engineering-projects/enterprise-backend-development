@@ -96,3 +96,66 @@ APP --> MONITOR
 
 APP --> CLIENT
 ```
+```
+• Monolith Architecture
+
+  • Flow Overview
+
+    • Client Side (Web / Mobile Apps)
+      • sends requests
+
+    • CDN (Static Assets)
+      • serves static content
+      • reduces load on backend
+
+    • Load Balancer
+      • distributes incoming traffic
+
+    • Monolithic Application
+      • handles all business logic in one codebase
+
+  • Data & Services
+
+    • Database
+      • primary data storage
+
+    • Cache (Redis)
+      • speeds up repeated reads
+
+    • Search Index
+      • enables fast search queries
+
+  • Observability
+
+    • Logging
+      • records system activity and errors
+
+    • Monitoring Metrics
+      • tracks performance and health
+
+  • Request Flow
+
+    • Client → CDN → Load Balancer → Application
+    • Application → Database / Cache / Search
+    • Application → Logs / Monitoring
+    • Application → Client (response)
+
+  • Key Characteristics
+
+    • Single deployable unit
+    • Centralized logic
+    • Simpler to start
+    • Harder to scale independently
+
+  • Tradeoffs
+
+    • Pros
+      • easier development and debugging (early stage)
+      • fewer moving parts
+      • simpler deployment
+
+    • Cons
+      • tight coupling of components
+      • scaling requires scaling entire app
+      • harder to maintain as system grows
+```
