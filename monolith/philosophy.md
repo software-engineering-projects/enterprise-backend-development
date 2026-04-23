@@ -231,6 +231,7 @@ EDGE_TITLE --- C
 APP_TITLE --- E
 DATA_TITLE --- I
 ```
+---
 ```mermaid
 graph TD
 
@@ -239,19 +240,19 @@ A[Web App]
 B[Mobile App]
 end
 
-subgraph EDGE["EDGE LAYER (Server Infrastructure)"]
+subgraph EDGE
 C[CDN]
 D[Load Balancer]
 end
 
-subgraph APP["APPLICATION LAYER (Monolith)"]
+subgraph APP
 E[Validation]
 F[Auth]
 G[Business Logic]
 H[DB Access]
 end
 
-subgraph DATA["DATA LAYER"]
+subgraph DATA
 I[(PostgreSQL)]
 J[(Redis)]
 K[(Search)]
