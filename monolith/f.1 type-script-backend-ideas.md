@@ -8,3 +8,8 @@
   - Implementation
     -  [Lecture](https://cloudaffle.com/series/object-oriented-typescript/encapsulation-in-typescript/#real-world-example)
     -  [Code](https://github.com/manikbajaj/typescript-design-patterns/tree/abstraction-implementation)
+- Polymorphism
+  - [Subtype](https://cloudaffle.com/series/object-oriented-typescript/polymorphism-in-typescript/)
+    - [Code](https://github.com/manikbajaj/typescript-design-patterns/tree/polymorphism)
+  - [Use Cases](https://cloudaffle.com/series/object-oriented-typescript/polymorphism-by-example/)
+  - [Advantages](https://cloudaffle.com/series/object-oriented-typescript/polymorphism-by-example/#the-power-of-polymorphism)
