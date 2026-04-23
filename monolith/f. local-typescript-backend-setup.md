@@ -197,3 +197,179 @@ types (data contracts)
 
 > [!TIP]
 > **🧠 One-Line Takeaway:** Using Deno, you can write and run TypeScript directly with built-in type checking, making it ideal for building a modular monolith backend without a separate build step.
+---
+```
+Local TypeScript Backend Setup Using Deno
+
+1. Overview
+
+  • Write backend code in TypeScript (.ts)  
+  • Run directly using Deno  
+  • Automatic type checking before execution  
+  • Supports modular monolith structure  
+  
+
+2. Prerequisites
+
+  • Install Deno  
+  
+  Verify installation:
+  deno --version  
+  
+
+3. Project Setup
+
+  • Create project folder:
+  
+  mkdir monolith-app  
+  cd monolith-app  
+
+
+4. Basic File Structure
+
+  Small Project (Single Module)
+  
+  monolith-app/  
+    main.ts  
+    order.ts  
+  
+  Medium Project (Modular Structure)
+  
+  monolith-app/  
+    main.ts  
+    modules/  
+      order/  
+        order.types.ts  
+        order.service.ts  
+
+
+5. Writing TypeScript Code
+
+  order.types.ts
+  
+  export type CreateOrderRequest = {  
+    userId: number;  
+    productId: number;  
+    quantity: number;  
+  };  
+  
+  
+  order.service.ts
+  
+  import { CreateOrderRequest } from "./order.types.ts";  
+  
+  export function createOrder(data: CreateOrderRequest) {  
+    return {  
+      orderId: crypto.randomUUID(),  
+      ...data,  
+    };  
+  }  
+
+
+  main.ts
+  
+  import { createOrder } from "./modules/order/order.service.ts";  
+  
+  const result = createOrder({  
+    userId: 1,  
+    productId: 10,  
+    quantity: 2,  
+  });  
+  
+  console.log(result);  
+
+
+6. Running the Application
+  
+  • Execute:
+  
+  deno run main.ts  
+
+
+7. Internal Execution Flow
+
+  TypeScript (.ts)  
+    → auto-check and compile  
+  JavaScript (internal)  
+    → executed by Deno  
+  
+
+8. TypeScript Validation Example
+
+  Incorrect Code
+  
+  const result = createOrder({  
+    userId: "1",  
+    productId: 10,  
+    quantity: 2,  
+  });  
+  
+  Result
+  
+  Type 'string' is not assignable to type 'number'  
+  
+  Correct Code
+  
+  const result = createOrder({  
+    userId: 1,  
+    productId: 10,  
+    quantity: 2,  
+  });  
+
+
+9. Key Concepts
+
+  TypeScript Layer  
+  • Enforces types during development  
+  • Prevents incorrect function usage  
+  • Runs automatically in Deno  
+  
+  Runtime Layer (Deno)  
+  • Executes compiled JavaScript  
+  • Handles actual program execution  
+  • Does not enforce TypeScript types  
+
+
+10. Important Limitation
+
+  • TypeScript does not validate external input  
+  
+  Example
+  
+  const body = await request.json();  
+  createOrder(body);  
+  
+  • Invalid runtime input (e.g. string instead of number) is not caught  
+  
+  
+  11. Runtime Validation Example
+  
+  function validateCreateOrder(data: any) {  
+    if (typeof data.userId !== "number") {  
+      throw new Error("Invalid userId");  
+    }  
+    return data;  
+  }  
+
+
+12. Monolith Development Model
+
+  main.ts  
+    → controller (request handling)  
+    → service (business logic)  
+    → types (data contracts)  
+  
+  
+  13. Summary
+  
+  • Write code in .ts  
+  • Deno runs the application  
+  • TypeScript provides compile-time safety  
+  • Deno handles runtime execution  
+  • Small projects: single file  
+  • Growing projects: modular structure  
+  
+  Key Takeaway
+  
+  Using Deno, you can write and run TypeScript directly with built-in type checking, enabling fast development of modular monolithic backends without a separate build step.
+```
