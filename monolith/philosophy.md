@@ -1,4 +1,4 @@
-## MONOLITH INFRASTRUCTURE PHILOSOPHY
+# MONOLITH INFRASTRUCTURE PHILOSOPHY
 
 A monolith is not "simple backend code."
 
@@ -8,7 +8,7 @@ It is:
 ---
 <br>
 
-### 🎯 Core Philosophy
+## 🎯 Core Philosophy
 
 #### 1. "One brain, many responsibilities"
 Instead of splitting logic across services like:
