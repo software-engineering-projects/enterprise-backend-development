@@ -17,6 +17,7 @@ Instead of splitting logic across services like:
 
 You have:
 *   🧠 **One application** that contains all of them internally.
+<br>
 
 ### 2. "Internal communication is free"
 Inside a monolith, function calls replace network calls. There is **no HTTP overhead** between modules.
