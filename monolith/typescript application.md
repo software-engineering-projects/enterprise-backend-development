@@ -99,10 +99,10 @@ graph LR
     B --> C[JS Output]
     C -->|Node / Deno| D{Execution}
     
-    style A fill:#3178c6,color:#fff
-    style B fill:#f1f1f1,stroke-dasharray: 5 5
-    style C fill:#f7df1e,color:#000
-    style D fill:#339933,color:#fff
+    style A fill:#1e4f8a,color:#ffffff
+    style B fill:#3a3a3a,stroke:#888888,stroke-dasharray: 5 5,color:#ffffff
+    style C fill:#8a7a12,color:#ffffff
+    style D fill:#1f6f1f,color:#ffffff
 ```
 
 1.  **TypeScript** is the architect’s validation.
