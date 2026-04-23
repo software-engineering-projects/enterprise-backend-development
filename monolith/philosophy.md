@@ -6,6 +6,7 @@ It is:
 > 🧩 **A single executable system** that owns all business logic, all rules, and all decisions, and coordinates everything internally.
 
 ---
+<br>
 
 ## 🎯 Core Philosophy
 
