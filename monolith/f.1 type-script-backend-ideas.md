@@ -18,3 +18,6 @@
   - Single Responsibility Principle
     - [Lecture](https://cloudaffle.com/series/solid-design-principles/single-responsibility-principle/)
     - [Code](https://github.com/manikbajaj/typescript-design-patterns/tree/single-responsibility-principle-intro) 
+  - Open Closed Principle
+    - [Lecture](https://cloudaffle.com/series/solid-design-principles/open-closed-principle/)
+    - [Code](https://github.com/manikbajaj/typescript-design-patterns/tree/open-close-principle) 
