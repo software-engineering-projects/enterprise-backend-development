@@ -3,6 +3,7 @@
 ### *A Clean Architecture Analogy for Backend Systems*
 ---
 In backend systems, correctness is enforced at multiple layers. These layers operate at different times, with different responsibilities, and different levels of trust. To understand this clearly, we map them to a **building construction analogy**.
+[TypeScript Design Patterns And SOLID Principles](https://www.udemy.com/course/design-patterns-using-typescript/?fbclid=IwY2xjawRWlxVleHRuA2FlbQIxMABicmlkETFwU1BFaG1HWTFBak1KQ3BDc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHgx791zoYkSRrBQODc6B4ypCKjGhgC7rf0HvC3bwwD-kURmlrOLZs6OGhGYk_aem_VAGoJoJf9efymqBPxi8cEA&utm_audience=mx&utm_campaign=ROW-FB-DRT-Visitor-Evergreen-ROW-Smartly-EN-Sales&utm_content=_._pd_5517248_._&utm_id=6782903478688&utm_medium=paid-social&utm_source=meta&utm_tactic=dpa&utm_term=_._ag_row_90_day_visitors_7_day_click_._ad_52503408800892_._&couponCode=PMNVD3025)
 <br>
 
 ### 🏗️ Overview
