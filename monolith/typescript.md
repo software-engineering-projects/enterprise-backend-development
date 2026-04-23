@@ -10,7 +10,7 @@ In backend systems, correctness is enforced at multiple layers. These layers ope
 
 ---
 
-## 🏗️ Overview
+### 🏗️ Overview
 
 | Layer | Analogy | Timing | Focus |
 | :--- | :--- | :--- | :--- |
@@ -20,7 +20,7 @@ In backend systems, correctness is enforced at multiple layers. These layers ope
 
 ---
 
-## 🟢 1. TypeScript (Design-Time Validation Layer)
+### 🟢 1. TypeScript (Design-Time Validation Layer)
 > **Analogy:** *The Architect reviewing blueprints before construction starts.*
 
 At this stage, nothing is built yet. Only the design exists. The architect ensures that the system is structurally sound before a single brick is laid.
@@ -119,9 +119,9 @@ graph TD
     C[Runtime Validation] -->|Validates| D[User Data]
     E[Execution] -->|Exposes| F[Real-world Reality]
     
-    style A fill:#d4edda,stroke:#28a745
-    style C fill:#fff3cd,stroke:#ffc107
-    style E fill:#f8d7da,stroke:#dc3545
+    style A fill:#2e5d3b,stroke:#1f3d27,color:#ffffff
+    style C fill:#6b5b1e,stroke:#4d4015,color:#ffffff
+    style E fill:#5a1f24,stroke:#3d1418,color:#ffffff
 ```
 
 | Layer | Purpose |
