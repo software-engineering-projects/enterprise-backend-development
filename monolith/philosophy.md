@@ -231,6 +231,32 @@ EDGE_TITLE --- C
 APP_TITLE --- E
 DATA_TITLE --- I
 ```
+```mermaid
+graph TD
+
+subgraph CLIENT
+A[Web App]
+B[Mobile App]
+end
+
+subgraph EDGE["EDGE LAYER (Server Infrastructure)"]
+C[CDN]
+D[Load Balancer]
+end
+
+subgraph APP["APPLICATION LAYER (Monolith)"]
+E[Validation]
+F[Auth]
+G[Business Logic]
+H[DB Access]
+end
+
+subgraph DATA["DATA LAYER"]
+I[(PostgreSQL)]
+J[(Redis)]
+K[(Search)]
+end
+```
 ```
 MONOLITH ARCHITECTURE FLOW DOCUMENTATION
 
