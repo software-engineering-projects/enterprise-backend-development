@@ -48,7 +48,7 @@ Monoliths are:
 <br>
 
 ### 5. "Boundaries are logical, not physical"
-You still structure code like microservices (e.g., `auth` module, `user` module, `payment` module), but they all live inside **one codebase**.
+- You still structure code like microservices (e.g., `auth` module, `user` module, `payment` module), but they all live inside **one codebase**.
 
 ---
 
