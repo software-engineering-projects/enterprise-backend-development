@@ -11,9 +11,9 @@ It is:
 
 ### 1. "One brain, many responsibilities"
 Instead of splitting logic across services like:
-    *   `auth-service`
-    *   `user-service`
-    *   `billing-service`
+*   `auth-service`
+*   `user-service`
+*   `billing-service`
 
 You have:
 *   🧠 **One application** that contains all of them internally.
