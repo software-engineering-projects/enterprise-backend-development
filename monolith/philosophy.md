@@ -140,7 +140,7 @@ The "nervous system" of your app.
 ---
 <br>
 
-## 🔁 FULL SYSTEM FLOW (COMPLETE VIEW)
+### 🔁 FULL SYSTEM FLOW (COMPLETE VIEW)
 
 ```mermaid
 graph TD
@@ -163,8 +163,8 @@ graph TD
   D --> C
   C --> A
 ```
-
 ---
+<br>
 
 ### 🚀 NEXT STEP: YOUR PROJECT
 
