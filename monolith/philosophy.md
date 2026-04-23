@@ -35,6 +35,7 @@ Because everything shares the:
 You can enforce **ACID-level correctness** without distributed complexity.
 <br>
 <br>
+<br>
 
 ### 4. "Complexity is postponed, not removed"
 Monoliths are:
@@ -42,6 +43,7 @@ Monoliths are:
 *   ❌ Harder as they grow.
 
 **The key idea:** You trade early simplicity for future restructuring flexibility.
+<br>
 <br>
 <br>
 
