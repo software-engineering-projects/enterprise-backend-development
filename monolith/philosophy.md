@@ -87,7 +87,7 @@ A user opens your app and says: *"I want to buy headphones."*
 *   **Scenario:** If you have 3 backend instances (App A, B, and C), the Load Balancer sends the request to the instance that is least busy.
 <br>
 
-### 🧠 3. APPLICATION LAYER (MONOLITH CORE) 
+#### 🧠 3. APPLICATION LAYER (MONOLITH CORE) 
 ---
 This is the **entire brain** of your system.
 
