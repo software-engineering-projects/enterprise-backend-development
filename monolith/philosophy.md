@@ -162,6 +162,130 @@ graph TD
   D --> C
   C --> A
 ```
+```
+MONOLITH ARCHITECTURE FLOW DOCUMENTATION
+
+---
+
+SYSTEM OVERVIEW
+
+    • This diagram represents a monolithic application architecture
+    • The system processes client requests through an edge layer and a single backend application
+    • All business logic, validation, authentication, and data access occur inside one application boundary
+
+---
+
+CLIENT LAYER
+
+    Client
+    • Entry point for system interaction
+    • Represents web or mobile applications
+    
+    Responsibilities
+    • Initiates requests to backend system
+    • Receives and renders responses
+    • Does not perform business logic or data processing
+
+---
+
+EDGE LAYER
+
+    CDN / Static Assets
+    • Serves static frontend resources
+    • Includes images, scripts, and stylesheets
+    • Reduces load on backend system
+    
+    Load Balancer
+    • Distributes incoming traffic
+    • Routes requests to monolithic application
+    • Improves availability and request handling
+
+---
+
+APPLICATION LAYER (MONOLITH CORE)
+
+    Monolithic Application
+    • Single backend system containing all core logic
+    
+    Internal Components
+    
+    Validation Layer
+    • Validates incoming request data
+    • Ensures required fields and constraints are satisfied
+    
+    Authentication Layer
+    • Handles user identity verification
+    • Processes login sessions and tokens
+    
+    Business Logic Layer
+    • Executes core application rules
+    • Handles domain logic such as orders, pricing, and processing rules
+    
+    Database Access Layer
+    • Interfaces with storage systems
+    • Performs read and write operations
+
+---
+
+DATA LAYER
+
+    PostgreSQL (Primary Database)
+    • Stores persistent structured data
+    • System of record for users, orders, and application state
+    
+    Redis (Cache Layer)
+    • Provides fast in-memory data access
+    • Reduces database query load
+    • Improves performance for repeated queries
+    
+    Search Index
+    • Supports fast query and search operations
+    • Enables efficient retrieval of product or structured data
+
+---
+
+SYSTEM FLOW
+
+    Request Flow
+    • Client sends request to system
+    • Request passes through CDN (if static content is required)
+    • Load balancer routes request to monolithic application
+    • Monolith processes request internally:
+      • validation
+      • authentication
+      • business logic execution
+      • database access
+    • Data layer is accessed when required
+    • Response is returned through load balancer back to client
+    
+    Response Flow
+    • Database results are processed inside monolith
+    • Application constructs response payload
+    • Response is sent back through load balancer
+    • Client receives final output
+
+---
+
+KEY ARCHITECTURAL CHARACTERISTICS
+
+    Design Type
+    • Monolithic architecture with layered internal structure
+    
+    Strengths
+    • Single deployment unit
+    • Low internal communication overhead
+    • Strong transactional consistency
+    • Simplified system coordination
+    
+    Constraints
+    • Scaling requires full application replication
+    • Internal modules are tightly coupled at runtime
+    • Growth increases internal complexity within single system boundary
+
+---
+
+END OF DOCUMENTATION
+```
 ---
 <br>
 
