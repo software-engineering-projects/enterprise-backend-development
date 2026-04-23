@@ -20,14 +20,14 @@ You have:
 *   🧠 **One application** that contains all of them internally.
 <br>
 
-### 2. "Internal communication is free"
+#### 2. "Internal communication is free"
 Inside a monolith, function calls replace network calls. There is **no HTTP overhead** between modules.
 
 *   **So:** `userService.createUser()` → *Direct function call*
 *   **Not:** An HTTP request to another service.
 <br>
 
-### 3. "Data consistency is easier"
+#### 3. "Data consistency is easier"
 Because everything shares the:
 *   Same runtime
 *   Same database connection rules
@@ -38,7 +38,7 @@ You can enforce **ACID-level correctness** without distributed complexity.
 <br>
 <br>
 
-### 4. "Complexity is postponed, not removed"
+#### 4. "Complexity is postponed, not removed"
 Monoliths are:
 *   ✅ Easy at the start.
 *   ❌ Harder as they grow.
@@ -48,17 +48,17 @@ Monoliths are:
 <br>
 <br>
 
-### 5. "Boundaries are logical, not physical"
+#### 5. "Boundaries are logical, not physical"
 - You still structure code like microservices (e.g., `auth` module, `user` module, `payment` module), but they all live inside **one codebase**.
 
 ---
 <br>
 
-## 🧱 YOUR SYSTEM (MENTAL MODEL)
+### 🧱 YOUR SYSTEM (MENTAL MODEL)
 
 Let’s imagine a **User Management + Simple E-commerce System**.
 
-### 🌐 1. CLIENT LAYER (Web / Mobile)
+#### 🌐 1. CLIENT LAYER (Web / Mobile)
 **What it is:** The UI (Browser or Mobile App).
 
 **Scenario:**
@@ -75,7 +75,7 @@ A user opens your app and says: *"I want to buy headphones."*
 
 ---
 
-### 🌍 2. EDGE LAYER (CDN + Load Balancer)
+#### 🌍 2. EDGE LAYER (CDN + Load Balancer)
 
 #### A. CDN (Content Delivery Network)
 *   **Role:** Serves static assets (JS bundle, images, CSS).
@@ -98,9 +98,9 @@ This is the **entire brain** of your system.
 
 ---
 
-## 🔥 SCENARIO FLOW (VERY IMPORTANT)
+### 🔥 SCENARIO FLOW (VERY IMPORTANT)
 
-### 🎯 Case Study: User places an order
+#### 🎯 Case Study: User places an order
 
 1.  **Request arrives:**
     Client sends:
@@ -125,7 +125,7 @@ This is the **entire brain** of your system.
 
 ---
 
-### 🗄️ 4. DATA LAYER
+#### 🗄️ 4. DATA LAYER
 
 *   **PostgreSQL (Primary DB):** The system of record for users, products, and orders.
 *   **Cache (Redis):** Speed layer. Returns search results instantly instead of querying the DB every time.
@@ -133,7 +133,7 @@ This is the **entire brain** of your system.
 
 ---
 
-### 📊 5. OBSERVABILITY LAYER
+#### 📊 5. OBSERVABILITY LAYER
 The "nervous system" of your app.
 
 *   **Logging System:** Traces what happened (e.g., `ERROR: stock not available`).
@@ -141,7 +141,7 @@ The "nervous system" of your app.
 
 ---
 
-## 🔁 FULL SYSTEM FLOW (COMPLETE VIEW)
+### 🔁 FULL SYSTEM FLOW (COMPLETE VIEW)
 
 ```mermaid
 graph TD
@@ -167,10 +167,10 @@ graph TD
 
 ---
 
-## 🚀 NEXT STEP: YOUR PROJECT
+### 🚀 NEXT STEP: YOUR PROJECT
 
 Since you already have **PostgreSQL**, **VS Code**, and **Deno**, we will build a:
-### 🧪 "Monolith Backend Simulator"
+#### 🧪 "Monolith Backend Simulator"
 
 **We will implement:**
 1.  HTTP server (Deno)
