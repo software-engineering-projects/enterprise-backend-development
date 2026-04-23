@@ -137,7 +137,6 @@ The "nervous system" of your app.
 
 *   **Logging System:** Traces what happened (e.g., `ERROR: stock not available`).
 *   **Metrics System:** Tracks request latency, error rates, and CPU usage.
----
 <br>
 
 ### 🔁 FULL SYSTEM FLOW (COMPLETE VIEW)
