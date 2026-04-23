@@ -297,65 +297,150 @@ APP --> MONITOR
 APP --> CLIENT
 ```
 ```
-Monolith Architecture
+SYSTEM ARCHITECTURE DOCUMENTATION (MONOLITHIC DESIGN)
 
-  • Flow Overview
+OVERVIEW
+• This architecture represents a monolithic application system
+• All core backend logic is contained within a single application unit
+• The system is optimized for simplicity, faster initial development, and easier deployment
+• External dependencies such as database, cache, and search are integrated directly with the monolith
 
-    • Client Side (Web / Mobile Apps)
-      • sends requests
+---
 
-    • CDN (Static Assets)
-      • serves static content
-      • reduces load on backend
+CLIENT LAYER
 
-    • Load Balancer
-      • distributes incoming traffic
+Components
+• Client Side Web Application
+• Mobile Applications
 
-    • Monolithic Application
-      • handles all business logic in one codebase
+Responsibilities
+• Provides user interface for system interaction
+• Sends requests to backend application
+• Receives and renders responses from backend
 
-  • Data & Services
+---
 
-    • Database
-      • primary data storage
+EDGE LAYER
 
-    • Cache (Redis)
-      • speeds up repeated reads
+Components
+• CDN (Content Delivery Network)
+• Load Balancer
 
-    • Search Index
-      • enables fast search queries
+Responsibilities
 
-  • Observability
+CDN
+• Serves static assets such as JavaScript, CSS, images, and frontend bundles
+• Reduces latency by caching content closer to users
 
-    • Logging
-      • records system activity and errors
+Load Balancer
+• Distributes incoming traffic to backend application instances
+• Ensures availability and basic load distribution
 
-    • Monitoring Metrics
-      • tracks performance and health
+---
 
-  • Request Flow
+APPLICATION LAYER
 
-    • Client → CDN → Load Balancer → Application
-    • Application → Database / Cache / Search
-    • Application → Logs / Monitoring
-    • Application → Client (response)
+Component
+• Monolithic Application
 
-  • Key Characteristics
+Responsibilities
+• Handles all backend business logic in a single codebase
+• Processes authentication, user requests, data operations, and search logic
+• Manages integration with database, cache, and search systems
+• Central point for request processing and response generation
 
-    • Single deployable unit
-    • Centralized logic
-    • Simpler to start
-    • Harder to scale independently
+---
 
-  • Tradeoffs
+DATA LAYER
 
-    • Pros
-      • easier development and debugging (early stage)
-      • fewer moving parts
-      • simpler deployment
+Components
+• Primary Database
+• Cache (Redis)
+• Search Index
 
-    • Cons
-      • tight coupling of components
-      • scaling requires scaling entire app
-      • harder to maintain as system grows
+Responsibilities
+
+Primary Database
+• Stores persistent structured application data
+• Serves as the system of record
+
+Cache (Redis)
+• Stores frequently accessed data
+• Reduces database load and improves response time
+
+Search Index
+• Provides fast search and query capabilities
+• Supports full-text or structured search functionality
+
+---
+
+OBSERVABILITY LAYER
+
+Components
+• Logging System
+• Monitoring Metrics System
+
+Responsibilities
+
+Logging System
+• Captures application logs for debugging and auditing
+• Records errors, requests, and system events
+
+Monitoring Metrics System
+• Tracks system performance metrics
+• Monitors application health, latency, and throughput
+
+---
+
+SYSTEM FLOW
+
+Request Flow
+• Client sends request to CDN
+• CDN serves static content and forwards dynamic requests to Load Balancer
+• Load Balancer routes request to Monolithic Application
+• Application processes request internally
+• Application interacts with:
+  • Database for persistent storage
+  • Cache for fast retrieval
+  • Search Index for search queries
+• Application returns response to client through Load Balancer
+
+Response Flow
+• Monolithic Application sends response back to Load Balancer
+• Load Balancer returns response to Client
+
+---
+
+DATA ACCESS PATTERN
+
+Application Interaction with Data Layer
+• Reads from Cache when available for performance optimization
+• Falls back to Database when cache misses occur
+• Queries Search Index for search-related functionality
+• Writes all persistent changes to Database
+
+---
+
+KEY DESIGN CHARACTERISTICS
+
+Simplicity
+• Single codebase for all backend logic
+• Reduced system complexity compared to microservices
+
+Deployment
+• Single deployment unit for backend system
+• Easier CI/CD pipeline management
+
+Performance Considerations
+• Cache reduces database load
+• CDN reduces frontend load time
+• Load balancer distributes incoming traffic
+
+Scalability Limitations
+• Scaling requires replication of entire application
+• No independent scaling of individual components
+
+Maintainability
+• Easier early-stage development
+• Complexity increases as application grows
 ```
