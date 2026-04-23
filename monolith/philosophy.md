@@ -122,8 +122,7 @@ This is the **entire brain** of your system.
     *   `INSERT INTO orders ...`
     *   `UPDATE products SET stock = stock - 2`
 5.  **Response returned:** `200 OK` with order details.
-
-
+<br>
 
 #### 🗄️ 4. DATA LAYER
 ---
