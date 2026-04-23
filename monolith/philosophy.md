@@ -24,6 +24,7 @@ Inside a monolith, function calls replace network calls. There is **no HTTP over
 
 *   **So:** `userService.createUser()` → *Direct function call*
 *   **Not:** An HTTP request to another service.
+<br>
 
 ### 3. "Data consistency is easier"
 Because everything shares the:
@@ -32,6 +33,7 @@ Because everything shares the:
 *   Same transaction boundary
 
 You can enforce **ACID-level correctness** without distributed complexity.
+<br>
 
 ### 4. "Complexity is postponed, not removed"
 Monoliths are:
@@ -39,6 +41,7 @@ Monoliths are:
 *   ❌ Harder as they grow.
 
 **The key idea:** You trade early simplicity for future restructuring flexibility.
+<br>
 
 ### 5. "Boundaries are logical, not physical"
 You still structure code like microservices (e.g., `auth` module, `user` module, `payment` module), but they all live inside **one codebase**.
