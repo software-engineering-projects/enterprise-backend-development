@@ -8,9 +8,9 @@ It is:
 ---
 <br>
 
-## 🎯 Core Philosophy
+### 🎯 Core Philosophy
 
-### 1. "One brain, many responsibilities"
+#### 1. "One brain, many responsibilities"
 Instead of splitting logic across services like:
 *   `auth-service`
 *   `user-service`
