@@ -94,7 +94,7 @@ It is a common misconception that TypeScript "watches" the data in your producti
 <br>
 
 ### 🧠 Why This Matters for Monolithic Architecture
-
+---
 Monolithic backend systems resemble a single large building with tightly connected internal structures.
 
 1.  **Interconnected Modules:** Like rooms in a house sharing the same plumbing.
@@ -106,8 +106,7 @@ TypeScript ensures that as the monolith grows:
 - Modules connect correctly.
 - Data structures remain consistent across the entire system.
 - Services interact safely without breaking distant parts of the app.
-
----
+<br>
 
 ## 🏁 Summary
 
